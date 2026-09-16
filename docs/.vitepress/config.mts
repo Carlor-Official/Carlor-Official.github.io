@@ -4,7 +4,7 @@ export default defineConfig({
   lang: 'zh-CN',
   title: '萌卡 NT',
   description: '面向 QQ NT 协议的跨平台机器人框架',
-  cleanUrls: true,
+  cleanUrls: false,
   lastUpdated: true,
   head: [
     ['meta', { name: 'theme-color', content: '#080b14' }],
