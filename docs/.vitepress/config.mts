@@ -20,7 +20,7 @@ export default defineConfig({
       { text: '开发', link: '/development/' },
       { text: '版本', link: '/releases/' },
       {
-        text: 'v2.3.8',
+        text: 'v2.3.9',
         items: [
           { text: '下载最新版', link: 'https://github.com/Carlor-Official/Mengka-NT/releases/latest' },
           { text: '更新记录', link: 'https://github.com/Carlor-Official/Mengka-NT/releases' },

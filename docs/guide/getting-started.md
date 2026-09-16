@@ -2,7 +2,7 @@
 
 ## 1. 下载正式包
 
-打开 [GitHub Releases](https://github.com/Carlor-Official/Mengka-NT/releases/latest)，按系统和 CPU 架构下载对应压缩包。当前正式版是 **v2.3.8**。
+打开 [GitHub Releases](https://github.com/Carlor-Official/Mengka-NT/releases/latest)，按系统和 CPU 架构下载对应压缩包。当前正式版是 **v2.3.9**。
 
 下载后建议使用同一发布页中的 `SHA256SUMS.txt` 校验文件完整性。
 

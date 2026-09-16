@@ -37,10 +37,10 @@ const paths = [
           <p>面向 QQ NT 协议的跨平台机器人框架。多账号、多节点、可视化 WebUI 与完整插件能力，从安装到扩展都在这里。</p>
           <div class="mk-actions">
             <a class="mk-button mk-button-primary" href="/guide/getting-started.html">立即开始 <span aria-hidden="true">→</span></a>
-            <a class="mk-button mk-button-secondary" href="https://github.com/Carlor-Official/Mengka-NT/releases/latest">下载 v2.3.8</a>
+            <a class="mk-button mk-button-secondary" href="https://github.com/Carlor-Official/Mengka-NT/releases/latest">下载 v2.3.9</a>
           </div>
           <div class="mk-meta" aria-label="平台与版本信息">
-            <span><i class="mk-status"></i> 当前正式版 v2.3.8</span>
+            <span><i class="mk-status"></i> 当前正式版 v2.3.9</span>
             <span>Windows</span><span>Linux</span><span>AMD64 / ARM64</span>
           </div>
         </div>
