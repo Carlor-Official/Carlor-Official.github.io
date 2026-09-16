@@ -7,9 +7,11 @@
     "dev": "vitepress dev docs",
     "build": "vitepress build docs",
     "preview": "vitepress preview docs",
-    "check": "npm run build"
+    "check": "npm run build",
+    "deploy": "npm run build && gh-pages -d docs/.vitepress/dist"
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "vitepress": "1.6.4",
     "vue": "3.5.21"
   },
