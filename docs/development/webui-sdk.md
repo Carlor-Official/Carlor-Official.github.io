@@ -10,4 +10,4 @@
 - 页面路由、静态资源和 WebSocket 地址必须兼容反向代理挂载路径；
 - 管理操作需要明确的成功、失败和重试反馈。
 
-[查看 WebUI SDK 文档](https://github.com/Carlor-Official/Mengka-NT/tree/master/sdk/plugin-web)
+[查看 WebUI SDK 文档](https://github.com/Carlor-Official/Mengka-NT/tree/main/sdk/plugin-web)

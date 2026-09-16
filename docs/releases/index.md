@@ -1,24 +1,16 @@
-# 发布中心
+# 下载与更新
 
-当前正式版：**v2.3.9**
-发布时间：**2026-09-16**
-
-[下载最新版](https://github.com/Carlor-Official/Mengka-NT/releases/latest) · [查看全部版本](https://github.com/Carlor-Official/Mengka-NT/releases)
-
-## v2.3.9 摘要
-
-- 将“来元宝 P 图一次”恢复为暂不支持；
-- 停止该任务的手动执行和自动计划；
-- 升级后清理该任务的旧会话、验证状态及自动计划选择；
-- 其他等级任务 API 与插件调用参数保持不变。
-
-完整变更与外发包以 [v2.3.9 Release](https://github.com/Carlor-Official/Mengka-NT/releases/tag/v2.3.9) 为准。
+<ReleasePanel detailed />
 
 ## 下载选择
 
-| 文件 | 适用环境 |
+| 文件标识 | 适用环境 |
 | --- | --- |
-| `mengka-nt-2.3.9-windows-amd64.zip` | Windows 64 位 |
-| `mengka-nt-2.3.9-linux-amd64.tar.gz` | Linux x86_64 |
-| `mengka-nt-2.3.9-linux-arm64.tar.gz` | Linux ARM64 |
+| `windows-amd64.zip` | Windows 64 位 |
+| `linux-amd64.tar.gz` | Linux x86_64 |
+| `linux-arm64.tar.gz` | Linux ARM64 |
 | `SHA256SUMS.txt` | 下载完整性校验 |
+
+版本号、发布时间和文件列表自动读取官方 GitHub Releases。读取失败时仍可通过官方发布页下载，不会展示过期版本作为最新版。
+
+[全部发布记录](https://github.com/Carlor-Official/Mengka-NT/releases) · [升级检查单](/releases/upgrade.html)

@@ -1,5 +1,7 @@
 # API 与事件
 
+[进入完整 API 参考](/api/) · [查看事件目录](/events/)
+
 ## Action 调用
 
 已认证插件可以调用框架注册的 action。账号相关调用通常需要 `self_id` 与 `client_type`，框架据此选择账号自身配置的节点；账号和节点管理操作才会显式使用 `node_id`。
@@ -7,11 +9,11 @@
 ```js
 const result = await api.call('get_friend_list', {
   self_id: '123456789',
-  client_type: 'linux',
+  client_type: 'linuxqq',
 })
 ```
 
-不同 action 的参数、返回值和可用边界，请以 [官方 Node.js SDK 文档](https://github.com/Carlor-Official/Mengka-NT/blob/master/sdk/nodejs/README.md) 为准。
+不同 action 的参数、返回值和可用边界，请以 [官方 Node.js SDK 文档](https://github.com/Carlor-Official/Mengka-NT/blob/main/sdk/nodejs/README.md) 为准。
 
 ## 运行时能力发现
 

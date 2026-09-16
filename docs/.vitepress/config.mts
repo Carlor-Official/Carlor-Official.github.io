@@ -1,4 +1,31 @@
 import { defineConfig } from 'vitepress'
+import { buildApiSidebar } from './api-sidebar.mjs'
+
+const developmentSidebar = [
+  { text: '开发入门', items: [
+    { text: '开发总览', link: '/development/' },
+    { text: '插件开发入门', link: '/reference/plugin-development.html' },
+    { text: 'Node.js SDK', link: '/development/nodejs-sdk.html' },
+  ] },
+  { text: '连接与通信', collapsed: true, items: [
+    { text: '正向 WebSocket', link: '/reference/forward-websocket.html' },
+    { text: '反向 WebSocket', link: '/reference/reverse-websocket.html' },
+    { text: '通信协议', link: '/reference/protocol.html' },
+    { text: '消息段', link: '/reference/message-segments.html' },
+  ] },
+  { text: '插件集成与发布', collapsed: true, items: [
+    { text: 'WebUI SDK', link: '/development/webui-sdk.html' },
+    { text: '托管插件与权限', link: '/reference/plugin-extension-v2.html' },
+    { text: '提交与发布插件', link: '/reference/plugin-publishing.html' },
+    { text: '插件文章示例', link: '/reference/plugin-article-example.html' },
+  ] },
+  { text: '接口与事件', collapsed: true, items: [
+    { text: 'API 总览', link: '/api/' },
+    { text: '事件参考', link: '/events/' },
+    { text: 'Linux QQ API 使用范围', link: '/reference/linuxqq-api-compatibility.html' },
+    { text: '登录流程', link: '/reference/login-flow.html' },
+  ] },
+]
 
 export default defineConfig({
   lang: 'zh-CN',
@@ -15,19 +42,35 @@ export default defineConfig({
     logo: '/logo.png',
     siteTitle: '萌卡 NT',
     nav: [
-      { text: '指南', link: '/guide/' },
-      { text: '部署', link: '/deploy/' },
-      { text: '开发', link: '/development/' },
-      { text: '版本', link: '/releases/' },
+      { text: '使用指南', link: '/guide/' },
+      { text: '部署安装', link: '/deploy/' },
+      { text: '开发文档', activeMatch: '^/(development|reference|api|events)/', items: [
+        { text: '开发指南', link: '/development/' },
+        { text: 'API 参考', link: '/api/' },
+        { text: '事件参考', link: '/events/' },
+      ] },
       {
-        text: 'v2.3.9',
+        text: '下载更新',
         items: [
+          { text: '下载中心', link: '/releases/' },
           { text: '下载最新版', link: 'https://github.com/Carlor-Official/Mengka-NT/releases/latest' },
           { text: '更新记录', link: 'https://github.com/Carlor-Official/Mengka-NT/releases' },
         ],
       },
     ],
     sidebar: {
+      '/api/': buildApiSidebar(),
+      '/events/': [
+        { text: '事件参考', items: [{ text: '事件概述', link: '/events/' }] },
+        { text: '事件分类', collapsed: false, items: [
+          { text: '消息事件', link: '/events/message.html' },
+          { text: '通知事件', link: '/events/notice.html' },
+          { text: '请求事件', link: '/events/request.html' },
+          { text: '系统事件', link: '/events/system.html' },
+        ] },
+        { text: '相关文档', collapsed: true, items: [{ text: 'API 参考', link: '/api/' }, { text: '消息段', link: '/reference/message-segments.html' }] },
+      ],
+      '/reference/': developmentSidebar,
       '/guide/': [
         {
           text: '开始使用',
@@ -48,17 +91,7 @@ export default defineConfig({
           ],
         },
       ],
-      '/development/': [
-        {
-          text: '插件开发',
-          items: [
-            { text: '开发总览', link: '/development/' },
-            { text: 'API 与事件', link: '/development/api.html' },
-            { text: 'Node.js SDK', link: '/development/nodejs-sdk.html' },
-            { text: 'WebUI SDK', link: '/development/webui-sdk.html' },
-          ],
-        },
-      ],
+      '/development/': developmentSidebar,
       '/releases/': [
         {
           text: '版本与升级',
@@ -89,12 +122,13 @@ export default defineConfig({
     outline: { level: [2, 3], label: '本页内容' },
     lastUpdated: { text: '最后更新' },
     docFooter: { prev: '上一篇', next: '下一篇' },
-    editLink: {
-      pattern: 'https://github.com/Carlor-Official/Carlor-Official.github.io/edit/main/docs/:path',
-      text: '在 GitHub 上编辑此页',
-    },
+    sidebarMenuLabel: '目录',
+    returnToTopLabel: '返回顶部',
+    darkModeSwitchLabel: '外观',
+    lightModeSwitchTitle: '切换到浅色模式',
+    darkModeSwitchTitle: '切换到深色模式',
     footer: {
-      message: '萌卡 NT 2.0 官网 · 当前为预发布版本',
+      message: '萌卡 NT · 连接想法，也连接你我。',
       copyright: 'Copyright © 2026 Carlor-Official',
     },
   },

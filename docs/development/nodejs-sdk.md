@@ -27,4 +27,4 @@ await api.connect()
 - 事件处理器需要可重入，并记录足够但不泄露密钥的诊断信息；
 - 版本升级前运行 SDK 自带的契约测试。
 
-[查看 SDK 源文件与完整说明](https://github.com/Carlor-Official/Mengka-NT/tree/master/sdk/nodejs)
+[查看 SDK 源文件与完整说明](https://github.com/Carlor-Official/Mengka-NT/tree/main/sdk/nodejs)
