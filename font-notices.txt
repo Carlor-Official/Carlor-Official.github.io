@@ -1,0 +1,14 @@
+HarmonyOS Sans SC
+Copyright 2021-2025 Huawei Device Co., Ltd. All Rights Reserved.
+Designed by Huawei Device Co., Ltd. and Hanyi Fonts.
+
+Fonts are governed by the HarmonyOS Sans Fonts License Agreement,
+not by the license of this website or its font-packaging helper.
+Official font documentation and license:
+https://developer.huawei.com/consumer/cn/doc/design-guides/font-0000001828772001
+
+Webfont packaging: harmonyos-sans-sc-webfont-splitted 1.1.0
+https://github.com/SunsetMkt/HarmonyOS_Sans_SC_Webfont_Splitted
+Packaging code: Unlicense. The font software retains its own license above.
+Unmodified packaged WOFF2 subsets are hosted with this website; the browser
+loads subsets according to unicode-range. No third-party font CDN is used.
