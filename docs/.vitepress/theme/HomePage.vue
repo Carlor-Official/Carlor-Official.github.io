@@ -1,82 +1,67 @@
 <script setup lang="ts">
-const features = [
-  {
-    index: '01',
-    title: '多账号，多节点',
-    text: '集中管理 QQ 账号、协议、设备指纹与连接节点，让不同环境各自独立、状态清晰。',
-  },
-  {
-    index: '02',
-    title: '插件即服务',
-    text: '正向与反向 WebSocket、Node.js SDK、WebUI SDK，以及统一的 action 结果与事件模型。',
-  },
-  {
-    index: '03',
-    title: 'Windows + Linux',
-    text: '提供 Windows AMD64、Linux AMD64 与 Linux ARM64 正式包，使用同一套 WebUI 管理。',
-  },
-]
+import { PhArrowRight, PhArrowUpRight, PhBookOpen, PhCode, PhDownloadSimple, PhGithubLogo, PhPlugsConnected, PhSquaresFour, PhTerminalWindow } from '@phosphor-icons/vue'
 
-const paths = [
-  { eyebrow: '第一次使用', title: '10 分钟启动框架', text: '下载、初始化、添加节点与账号。', href: '/guide/getting-started.html', action: '开始安装' },
-  { eyebrow: '部署到服务器', title: '稳定运行在 Linux', text: 'systemd 守护、Nginx 与 WebSocket 反代。', href: '/deploy/linux.html', action: '查看部署' },
-  { eyebrow: '构建插件', title: '连接 234 个 action', text: '从认证、调用到事件订阅，快速接入 SDK。', href: '/development/', action: '进入开发' },
+const features = [
+  { icon: PhSquaresFour, title: '多账号，一个控制台', text: '账号、设备指纹与连接节点集中管理。通过 WebUI 查看状态，让日常操作清晰有序。', href: '/guide/', link: '认识萌卡 NT' },
+  { icon: PhTerminalWindow, title: '部署简单，运行自在', text: '支持 Windows 与 Linux，使用本地 SQLite 存储。从个人电脑到服务器，都有对应的部署指南。', href: '/deploy/', link: '查看部署指南' },
+  { icon: PhPlugsConnected, title: '用插件，拓展更多可能', text: '通过 WebSocket 接入插件，使用 Node.js SDK 调用接口、订阅事件，连接你的机器人应用。', href: '/development/', link: '了解插件开发' },
+]
+const resources = [
+  { icon: PhBookOpen, title: '安装与配置', description: '从下载框架到登录第一个 QQ 账号', href: '/guide/getting-started.html' },
+  { icon: PhCode, title: 'API 与事件', description: '查阅接口、消息事件与调用约定', href: '/development/api.html' },
+  { icon: PhPlugsConnected, title: 'Node.js SDK', description: '连接框架，开始编写你的插件', href: '/development/nodejs-sdk.html' },
+  { icon: PhSquaresFour, title: 'WebUI SDK', description: '为插件接入可视化管理页面', href: '/development/webui-sdk.html' },
 ]
 </script>
 
 <template>
   <main class="mk-home">
-    <section class="mk-hero">
-      <div class="mk-grid" aria-hidden="true"></div>
-      <div class="mk-orb mk-orb-a" aria-hidden="true"></div>
-      <div class="mk-orb mk-orb-b" aria-hidden="true"></div>
-      <div class="mk-hero-inner">
-        <div class="mk-hero-copy">
-          <div class="mk-kicker"><span></span> MENGKA NT / NEXT</div>
-          <h1>把复杂的 QQ 机器人运行环境，<em>收进一套清晰的系统。</em></h1>
-          <p>面向 QQ NT 协议的跨平台机器人框架。多账号、多节点、可视化 WebUI 与完整插件能力，从安装到扩展都在这里。</p>
-          <div class="mk-actions">
-            <a class="mk-button mk-button-primary" href="/guide/getting-started.html">立即开始 <span aria-hidden="true">→</span></a>
-            <a class="mk-button mk-button-secondary" href="https://github.com/Carlor-Official/Mengka-NT/releases/latest">下载 v2.3.9</a>
-          </div>
-          <div class="mk-meta" aria-label="平台与版本信息">
-            <span><i class="mk-status"></i> 当前正式版 v2.3.9</span>
-            <span>Windows</span><span>Linux</span><span>AMD64 / ARM64</span>
-          </div>
+    <section class="mk-hero" aria-labelledby="mk-title">
+      <div class="mk-hero-copy">
+        <a class="mk-announcement" href="/releases/">萌卡 NT 2.0 官网预览 <PhArrowUpRight :size="14" aria-hidden="true" /></a>
+        <h1 id="mk-title">萌卡 <span>NT</span></h1>
+        <h2>让机器人连接<br />你的每一个想法。</h2>
+        <p>面向 QQ NT 协议的跨平台机器人框架。<br class="mk-desktop-break" />多账号管理、可视化配置，从部署到插件开发。</p>
+        <div class="mk-actions">
+          <a class="mk-button mk-primary" href="/guide/getting-started.html">开始使用 <PhArrowRight :size="18" aria-hidden="true" /></a>
+          <a class="mk-button mk-secondary" href="https://github.com/Carlor-Official/Mengka-NT"><PhGithubLogo :size="20" aria-hidden="true" /> GitHub</a>
         </div>
-
-        <div class="mk-console" aria-label="萌卡 NT 启动示例">
-          <div class="mk-console-head"><span></span><span></span><span></span><b>mengka-nt / overview</b></div>
-          <div class="mk-console-body">
-            <div class="mk-console-brand"><img src="/logo.png" alt="" /><div><strong>萌卡 NT</strong><small>Framework online</small></div></div>
-            <div class="mk-stat-row"><div><small>ACCOUNTS</small><strong>08</strong><em>7 online</em></div><div><small>NODES</small><strong>03</strong><em>all healthy</em></div></div>
-            <div class="mk-terminal"><span class="mk-prompt">$</span> ./mengka-nt<br/><span class="mk-muted">[ready]</span> WebUI listening on :6099<br/><span class="mk-muted">[ready]</span> plugin gateway connected<span class="mk-cursor"></span></div>
-          </div>
-        </div>
+      </div>
+      <div class="mk-hero-art">
+        <div class="mk-art-halo" aria-hidden="true"></div>
+        <img src="/logo.png" width="486" height="512" alt="萌卡 NT 品牌形象" fetchpriority="high" />
       </div>
     </section>
 
-    <section class="mk-section mk-intro">
-      <div class="mk-section-label">SYSTEM / 01</div>
-      <div class="mk-intro-copy"><h2>不是一堆零散工具。<br/>是一条完整的运行链路。</h2><p>账号从登录、路由到事件投递，插件从认证、调用到网页管理，都由同一个框架衔接。</p></div>
-      <div class="mk-features">
-        <article v-for="feature in features" :key="feature.index"><span>{{ feature.index }}</span><h3>{{ feature.title }}</h3><p>{{ feature.text }}</p></article>
-      </div>
+    <section class="mk-feature-grid" aria-label="框架特性">
+      <a v-for="feature in features" :key="feature.title" :href="feature.href" class="mk-feature-card">
+        <span class="mk-icon"><component :is="feature.icon" :size="27" weight="duotone" aria-hidden="true" /></span>
+        <h2>{{ feature.title }}</h2><p>{{ feature.text }}</p>
+        <span class="mk-card-link">{{ feature.link }} <PhArrowRight :size="16" aria-hidden="true" /></span>
+      </a>
     </section>
 
-    <section class="mk-section mk-paths">
-      <div class="mk-section-label">START / 02</div>
-      <div class="mk-paths-head"><h2>从你现在的位置出发</h2><p>安装、部署与开发，选择一条最短路径。</p></div>
-      <div class="mk-path-grid">
-        <a v-for="path in paths" :key="path.href" :href="path.href">
-          <small>{{ path.eyebrow }}</small><h3>{{ path.title }}</h3><p>{{ path.text }}</p><span>{{ path.action }} →</span>
+    <section class="mk-resources" aria-labelledby="mk-resources-title">
+      <div class="mk-section-heading"><h2 id="mk-resources-title">从这里开始探索</h2><p>第一次使用，或准备开发新插件，都能找到下一步。</p></div>
+      <div class="mk-resource-grid">
+        <a v-for="resource in resources" :key="resource.title" :href="resource.href" class="mk-resource-card">
+          <span class="mk-resource-icon"><component :is="resource.icon" :size="24" weight="duotone" aria-hidden="true" /></span>
+          <span class="mk-resource-copy"><h3>{{ resource.title }}</h3><p>{{ resource.description }}</p></span>
+          <PhArrowUpRight :size="20" class="mk-resource-arrow" aria-hidden="true" />
         </a>
       </div>
     </section>
 
-    <section class="mk-cta">
-      <div><small>READY TO RUN</small><h2>从最新版开始。</h2><p>只从官方 GitHub Release 下载正式外发包。</p></div>
-      <div class="mk-actions"><a class="mk-button mk-button-primary" href="https://github.com/Carlor-Official/Mengka-NT/releases/latest">前往发布库</a><a class="mk-button mk-button-secondary" href="/releases/upgrade.html">阅读升级说明</a></div>
+    <section class="mk-release" aria-labelledby="mk-release-title">
+      <div><span class="mk-release-label">正式版本</span><h2 id="mk-release-title">萌卡 NT v2.3.9</h2><p>Windows AMD64 / Linux AMD64 / Linux ARM64</p></div>
+      <div class="mk-release-actions"><a class="mk-button mk-primary" href="https://github.com/Carlor-Official/Mengka-NT/releases/latest"><PhDownloadSimple :size="19" aria-hidden="true" />下载最新版</a><a class="mk-text-link" href="/releases/upgrade.html">升级说明 <PhArrowUpRight :size="16" aria-hidden="true" /></a></div>
     </section>
+
+    <div class="mk-footer-links" aria-label="更多资源">
+      <div class="mk-footer-brand"><img src="/logo.png" width="36" height="38" alt="" /><span>萌卡 NT<small>连接想法，也连接你我。</small></span></div>
+      <div><h2>使用指南</h2><a href="/deploy/windows.html">Windows 部署</a><a href="/deploy/linux.html">Linux 部署</a></div>
+      <div><h2>开发资源</h2><a href="/development/api.html">API 文档</a><a href="/development/nodejs-sdk.html">Node.js SDK</a></div>
+      <div><h2>项目</h2><a href="https://github.com/Carlor-Official/Mengka-NT/releases">发布记录</a><a href="https://github.com/Carlor-Official/Carlor-Official.github.io">网站源码</a></div>
+    </div>
   </main>
 </template>

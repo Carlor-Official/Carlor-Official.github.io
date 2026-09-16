@@ -7,7 +7,7 @@ export default defineConfig({
   cleanUrls: false,
   lastUpdated: true,
   head: [
-    ['meta', { name: 'theme-color', content: '#080b14' }],
+    ['meta', { name: 'theme-color', content: '#fdfdff' }],
     ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1.0' }],
     ['link', { rel: 'icon', type: 'image/png', href: '/logo.png' }],
   ],
@@ -72,7 +72,20 @@ export default defineConfig({
     socialLinks: [
       { icon: 'github', link: 'https://github.com/Carlor-Official/Mengka-NT' },
     ],
-    search: { provider: 'local' },
+    search: {
+      provider: 'local',
+      options: {
+        translations: {
+          button: { buttonText: '搜索文档', buttonAriaLabel: '搜索文档' },
+          modal: {
+            noResultsText: '没有找到相关内容',
+            resetButtonTitle: '清除搜索',
+            displayDetails: '显示详细内容',
+            footer: { navigateText: '切换', selectText: '打开', closeText: '关闭' },
+          },
+        },
+      },
+    },
     outline: { level: [2, 3], label: '本页内容' },
     lastUpdated: { text: '最后更新' },
     docFooter: { prev: '上一篇', next: '下一篇' },
