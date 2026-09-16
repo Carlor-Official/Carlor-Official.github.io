@@ -24,11 +24,6 @@
   --mk-release-bg: #2c283c;
 }
 body { text-rendering: optimizeLegibility; }
-.VPNavBarTitle .logo { width: 28px; height: 30px; object-fit: contain; }
-.VPNavBarTitle .title { font-size: 18px; font-weight: 650; }
-.VPNavBarSearch .DocSearch-Button { border-radius: 10px; }
-.VPNavBar { background: var(--vp-c-bg) !important; }
-.VPNavBar .divider-line { background: var(--vp-c-divider) !important; }
 .VPHome { margin-bottom: 0 !important; }
 .VPFooter { background: var(--vp-c-bg-alt); }
 .VPFooter .message, .VPFooter .copyright { color: var(--vp-c-text-2); }
@@ -36,7 +31,6 @@ body { text-rendering: optimizeLegibility; }
 .vp-doc h2 { letter-spacing: -.02em; }
 .vp-doc div[class*='language-'] { border: 1px solid var(--vp-c-divider); border-radius: 14px; }
 .vp-doc .custom-block { border-radius: 14px; }
-.VPSidebarItem.level-1.is-active > .item { background: var(--vp-c-brand-soft); border-radius: 8px; }
 .VPDoc .content-container { max-width: 760px !important; }
 .vp-doc table { width: 100%; display: table; }
 @media (max-width: 640px) { .vp-doc table { display: block; overflow-x: auto; } }
@@ -85,8 +79,6 @@ body { text-rendering: optimizeLegibility; }
 .vp-doc .mk-release a { text-decoration: none; }
 .vp-doc .mk-release a.mk-primary { color: var(--vp-button-brand-text); }
 .vp-doc .mk-release { flex-wrap: wrap; padding: 26px; margin: 24px 0; }
-.VPSidebarItem.level-2 .text { font-size: 13px; }
-.VPSidebarItem.level-1.has-active > .item > .text { color: var(--vp-c-brand-1); }
 .mk-feature-card p { font-size: 14px; line-height: 1.85; color: var(--vp-c-text-2); }
 .mk-card-link { display: flex; align-items: center; gap: 8px; margin-top: auto; padding-top: 24px; color: var(--vp-c-brand-1); font-size: 13px; font-weight: 550; }
 .mk-resources { margin-top: 76px; }

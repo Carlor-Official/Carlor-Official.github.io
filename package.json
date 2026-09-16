@@ -14,6 +14,7 @@
   "devDependencies": {
     "@phosphor-icons/vue": "^2.2.1",
     "gh-pages": "^6.3.0",
+    "harmonyos-sans-sc-webfont-splitted": "1.1.0",
     "vitepress": "1.6.4",
     "vue": "3.5.21"
   },
