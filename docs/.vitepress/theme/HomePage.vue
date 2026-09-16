@@ -18,8 +18,8 @@ const features = [
 ]
 
 const paths = [
-  { eyebrow: '第一次使用', title: '10 分钟启动框架', text: '下载、初始化、添加节点与账号。', href: '/guide/getting-started', action: '开始安装' },
-  { eyebrow: '部署到服务器', title: '稳定运行在 Linux', text: 'systemd 守护、Nginx 与 WebSocket 反代。', href: '/deploy/linux', action: '查看部署' },
+  { eyebrow: '第一次使用', title: '10 分钟启动框架', text: '下载、初始化、添加节点与账号。', href: '/guide/getting-started.html', action: '开始安装' },
+  { eyebrow: '部署到服务器', title: '稳定运行在 Linux', text: 'systemd 守护、Nginx 与 WebSocket 反代。', href: '/deploy/linux.html', action: '查看部署' },
   { eyebrow: '构建插件', title: '连接 234 个 action', text: '从认证、调用到事件订阅，快速接入 SDK。', href: '/development/', action: '进入开发' },
 ]
 </script>
@@ -36,7 +36,7 @@ const paths = [
           <h1>把复杂的 QQ 机器人运行环境，<em>收进一套清晰的系统。</em></h1>
           <p>面向 QQ NT 协议的跨平台机器人框架。多账号、多节点、可视化 WebUI 与完整插件能力，从安装到扩展都在这里。</p>
           <div class="mk-actions">
-            <a class="mk-button mk-button-primary" href="/guide/getting-started">立即开始 <span aria-hidden="true">→</span></a>
+            <a class="mk-button mk-button-primary" href="/guide/getting-started.html">立即开始 <span aria-hidden="true">→</span></a>
             <a class="mk-button mk-button-secondary" href="https://github.com/Carlor-Official/Mengka-NT/releases/latest">下载 v2.3.8</a>
           </div>
           <div class="mk-meta" aria-label="平台与版本信息">
@@ -76,7 +76,7 @@ const paths = [
 
     <section class="mk-cta">
       <div><small>READY TO RUN</small><h2>从最新版开始。</h2><p>只从官方 GitHub Release 下载正式外发包。</p></div>
-      <div class="mk-actions"><a class="mk-button mk-button-primary" href="https://github.com/Carlor-Official/Mengka-NT/releases/latest">前往发布库</a><a class="mk-button mk-button-secondary" href="/releases/upgrade">阅读升级说明</a></div>
+      <div class="mk-actions"><a class="mk-button mk-button-primary" href="https://github.com/Carlor-Official/Mengka-NT/releases/latest">前往发布库</a><a class="mk-button mk-button-secondary" href="/releases/upgrade.html">阅读升级说明</a></div>
     </section>
   </main>
 </template>

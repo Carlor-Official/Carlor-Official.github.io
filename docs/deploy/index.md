@@ -4,8 +4,8 @@
 
 ## 选择平台
 
-- [Windows 部署](/deploy/windows)：适合桌面环境、快速体验和本地机器人。
-- [Linux 部署](/deploy/linux)：适合服务器长期运行，包含 systemd 与 Nginx 示例。
+- [Windows 部署](/deploy/windows.html)：适合桌面环境、快速体验和本地机器人。
+- [Linux 部署](/deploy/linux.html)：适合服务器长期运行，包含 systemd 与 Nginx 示例。
 
 ## 上线前检查
 

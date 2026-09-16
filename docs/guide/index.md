@@ -24,4 +24,4 @@
 | Linux | AMD64 / x86_64 | `mengka-nt-*-linux-amd64.tar.gz` |
 | Linux | ARM64 / AArch64 | `mengka-nt-*-linux-arm64.tar.gz` |
 
-[开始安装 →](/guide/getting-started)
+[开始安装 →](/guide/getting-started.html)

@@ -33,8 +33,8 @@ export default defineConfig({
           text: '开始使用',
           items: [
             { text: '认识萌卡 NT', link: '/guide/' },
-            { text: '快速开始', link: '/guide/getting-started' },
-            { text: '仓库与资源', link: '/guide/resources' },
+            { text: '快速开始', link: '/guide/getting-started.html' },
+            { text: '仓库与资源', link: '/guide/resources.html' },
           ],
         },
       ],
@@ -43,8 +43,8 @@ export default defineConfig({
           text: '部署与运维',
           items: [
             { text: '部署总览', link: '/deploy/' },
-            { text: 'Windows', link: '/deploy/windows' },
-            { text: 'Linux', link: '/deploy/linux' },
+            { text: 'Windows', link: '/deploy/windows.html' },
+            { text: 'Linux', link: '/deploy/linux.html' },
           ],
         },
       ],
@@ -53,9 +53,9 @@ export default defineConfig({
           text: '插件开发',
           items: [
             { text: '开发总览', link: '/development/' },
-            { text: 'API 与事件', link: '/development/api' },
-            { text: 'Node.js SDK', link: '/development/nodejs-sdk' },
-            { text: 'WebUI SDK', link: '/development/webui-sdk' },
+            { text: 'API 与事件', link: '/development/api.html' },
+            { text: 'Node.js SDK', link: '/development/nodejs-sdk.html' },
+            { text: 'WebUI SDK', link: '/development/webui-sdk.html' },
           ],
         },
       ],
@@ -64,7 +64,7 @@ export default defineConfig({
           text: '版本与升级',
           items: [
             { text: '发布中心', link: '/releases/' },
-            { text: '升级检查单', link: '/releases/upgrade' },
+            { text: '升级检查单', link: '/releases/upgrade.html' },
           ],
         },
       ],
