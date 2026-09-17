@@ -1,0 +1,7 @@
+{
+  "version": 1,
+  "include": [
+    "/apis/api.mknt.net/v1alpha1/framework-version-policy"
+  ],
+  "exclude": []
+}
