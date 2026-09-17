@@ -34,3 +34,17 @@ test('temporary homepage labels and fixed latest-version labels are absent', () 
   const files=['docs/.vitepress/theme/HomePage.vue','docs/.vitepress/config.mts','docs/releases/index.md','docs/guide/index.md','docs/guide/getting-started.md']
   for(const file of files) assert.doesNotMatch(fs.readFileSync(file,'utf8'), /官网预览|预发布版本|网站源码|官网源码|v2\.3\.9/)
 })
+test('website documents local plugin import instead of an official catalog', () => {
+  const files = [
+    'README.md',
+    'docs/.vitepress/config.mts',
+    'docs/.vitepress/theme/HomePage.vue',
+    'docs/reference/managed-plugins.md',
+    'docs/reference/plugin-publishing.md'
+  ]
+  const source = files.map(file => fs.readFileSync(file, 'utf8')).join('\n')
+  assert.match(source, /插件导入/)
+  assert.match(source, /手动上传|本地上传/)
+  assert.doesNotMatch(source, /内置插件市场|云端市场|官网审核并冻结|框架自动同步插件/)
+  assert.ok(fs.statSync('docs/public/framework-overview.png').size > 100000)
+})

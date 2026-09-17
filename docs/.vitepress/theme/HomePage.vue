@@ -1,18 +1,18 @@
 <script setup lang="ts">
-import { PhArrowRight, PhArrowUpRight, PhBookOpen, PhCode, PhGithubLogo, PhPlugsConnected, PhSquaresFour, PhDesktopTower, PhPackage, PhCheckCircle, PhBrowsers } from '@phosphor-icons/vue'
+import { PhArrowRight, PhArrowUpRight, PhBookOpen, PhCode, PhGithubLogo, PhPlugsConnected, PhSquaresFour, PhPackage, PhCheckCircle, PhBrowsers, PhShieldCheck } from '@phosphor-icons/vue'
 import ReleasePanel from './ReleasePanel.vue'
 
 const features = [
   { icon: PhSquaresFour, title: '多账号可视化管理', text: '在统一后台查看账号状态、消息统计、节点连接与运行情况，日常维护更加直观。', href: '/guide/', link: '了解框架' },
-  { icon: PhPackage, title: '内置插件市场', text: '框架自动同步云端插件列表，支持详情查看、快捷安装、检查更新和卸载。', href: '/development/', link: '了解插件生态' },
-  { icon: PhDesktopTower, title: '智能跨平台安装', text: '根据当前框架运行环境自动选择 Windows 或 Linux 插件版本，减少手动判断。', href: '/deploy/', link: '选择部署方式' },
+  { icon: PhShieldCheck, title: '本地管理员初始化', text: '首次访问直接创建本地管理员账号和密码，不依赖官网令牌或远程用户系统。', href: '/guide/getting-started.html', link: '查看初始化流程' },
+  { icon: PhPackage, title: '本地插件导入', text: '上传 ZIP 或 TAR.GZ 成品包，框架在本地完成校验、安装、运行和版本替换。', href: '/reference/managed-plugins.html', link: '查看导入方式' },
   { icon: PhPlugsConnected, title: '双向 WebSocket', text: '插件可选择正向 WebSocket、反向 WebSocket，或同时支持两种接入模式。', href: '/development/nodejs-sdk.html', link: '接入 SDK' },
   { icon: PhCode, title: '标准 SDK 与 API', text: '统一的事件与 API 规范让插件开发者可以复用相同链路，快速接入框架能力。', href: '/api/', link: '查阅接口文档' },
   { icon: PhBrowsers, title: '插件 Web 后台联动', text: '支持有管理页面的插件在框架内打开后台，同时兼容没有 Web 页面的轻量插件。', href: '/development/webui-sdk.html', link: '了解 WebUI SDK' },
 ]
 const showcases = [
-  { title: '萌卡 NT 框架', image: '/framework-overview.png', href: '/guide/getting-started.html', link: '开始部署框架', points: ['可视化管理 QQ 账号、节点与运行状态', 'Windows 与 Linux 双平台部署', '正向、反向 WebSocket 两种接入方式', '内置插件市场，无需用户手动对接', '服务列表支持快捷创建和统一管理', '更新、运行状态与操作日志集中查看'] },
-  { title: '开发者平台与插件生态', image: '/developer-ecosystem.png', href: 'https://mknt.rezcwl.com/developers/', link: '进入开发者平台', points: ['开发者账号由管理员统一创建和管理', '支持草稿、审核、上架、下架和版本更新', 'Windows、Linux 下载地址分别维护', '标准 SDK 与完整 API、事件文档', '插件 Web 后台可与框架界面联动', '云端市场与框架自动同步插件状态'] },
+  { title: '萌卡 NT 框架', image: '/framework-overview.png', href: '/guide/getting-started.html', link: '开始部署框架', points: ['可视化管理 QQ 账号、节点与运行状态', 'Windows 与 Linux 双平台部署', '插件包从本地上传并生成管理卡片', '正向、反向 WebSocket 两种接入方式', '本地管理员独立完成初始化和登录', '更新、运行状态与操作日志集中查看'] },
+  { title: '开发文档与扩展接入', image: '/api-reference.png', href: '/development/', link: '进入开发文档', points: ['API 按功能与子类分层展示', '正向、反向 WebSocket 接入文档', '标准 Node.js SDK 与完整事件参考', 'Windows、Linux 部署教程分别维护', '插件 Web 管理端可与框架界面联动', '正式版本和下载文件从 GitHub Releases 读取'] },
 ]
 const resources = [
   { icon: PhBookOpen, title: '安装与配置', description: '从下载框架到登录第一个 QQ 账号', href: '/guide/getting-started.html' },
@@ -51,7 +51,7 @@ const resources = [
     </section>
 
     <section class="mk-features" aria-labelledby="mk-features-title">
-      <div class="mk-section-heading"><h2 id="mk-features-title">核心特色</h2><p>从账号运行、插件安装到开发发布，所有关键能力围绕同一套框架协同工作。</p></div>
+      <div class="mk-section-heading"><h2 id="mk-features-title">核心特色</h2><p>从账号运行、本地插件导入到外部服务对接，所有关键能力围绕同一套框架协同工作。</p></div>
       <div class="mk-feature-grid">
       <a v-for="feature in features" :key="feature.title" :href="feature.href" class="mk-feature-card">
         <span class="mk-icon"><component :is="feature.icon" :size="27" weight="duotone" aria-hidden="true" /></span>

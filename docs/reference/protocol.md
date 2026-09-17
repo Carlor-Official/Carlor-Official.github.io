@@ -69,7 +69,7 @@ SDK使用 `id` 关联请求。默认超时为 30 秒，媒体、红包、头像�
 }
 ```
 
-市场安装的服务只能调用安装授权快照中的 action。未获授权时仍返回对应 `id` 的失败响应，例如：
+本地导入的托管服务只能调用安装授权快照中的 action。未获授权时仍返回对应 `id` 的失败响应，例如：
 
 ```json
 {
@@ -96,11 +96,11 @@ SDK使用 `id` 关联请求。默认超时为 30 秒，媒体、红包、头像�
 
 `data.event_type` 是精确事件名，`data.category` 是语义分类，`data.post_type` 是大类监听入口。完整事件包含 `event_id`、`occurred_at`、`self_id` 和 `client_type`，上面仅为帧结构示意。当前 26 个精确事件及字段见[事件参考](/events/)。
 
-市场服务只接收授权快照中的事件；手工服务按照连接声明的事件权限接收事件。
+本地导入的托管服务只接收授权快照中的事件；手工服务按照连接声明的事件权限接收事件。
 
 ## 控制与生命周期帧
 
-市场托管插件可在同一连接接收 `lifecycle`、`job_trigger` 和可选 `http_webhook`，并发送 `control_register`。框架用 `control_result` 回应注册结果。控制帧不会改变官网审核快照中的 action/event 权限，断线后注册任务也会失效。完整字段和限制见[插件托管与权限协议](/reference/plugin-extension-v2.html)。
+本地导入插件可在同一连接接收 `lifecycle`、`job_trigger` 和可选 `http_webhook`，并发送 `control_register`。框架用 `control_result` 回应注册结果。控制帧不会扩大 action 或事件权限，断线后注册任务也会失效。完整字段和限制见[本地托管插件接入](/reference/plugin-extension-v2.html)。
 
 ## 心跳
 
