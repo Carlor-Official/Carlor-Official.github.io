@@ -15,6 +15,10 @@ const result = await api.call('get_friend_list', {
 
 不同 action 的参数、返回值和可用边界，请以 [官方 Node.js SDK 文档](https://github.com/Carlor-Official/Mengka-NT/blob/main/sdk/nodejs/README.md) 为准。
 
+## 原生 IPC 调用
+
+v2.4.1 的 `native-ipc-v1` 插件由框架启动，通过标准输入/输出传输同一套 action、事件和权限帧。插件不监听端口，也不在代码中保存服务令牌；启动后先读取 `get_plugin_context`，再按运行时返回的 `available_actions` 调用接口。原有正向、反向 WebSocket 插件继续使用相同的 action 契约。
+
 ## 运行时能力发现
 
 插件启动后应调用 `get_plugin_context`，读取：
