@@ -24,4 +24,4 @@
 
 ## v2.4.1 原生包示例
 
-萌卡 NT 用户系统的已验证 Linux AMD64 原生包在[用户系统独立 Release](https://github.com/Carlor-Official/mengka-user-system-source/releases/tag/v2.0.17-native-ipc)发布。包版本为 `2.0.17`，最低框架版本为 `2.4.1`，传输为 `native-ipc-v1`。安装前下载同一 Release 的 `linux-amd64-native.json` 与 `SHA256SUMS.txt` 校验文件；安装时只从「插件 → 插件导入」上传，不要把包内程序拆出运行，也不要将原生插件端口暴露到公网。
+萌卡 NT 用户系统的已验证 Linux AMD64 原生包在[用户系统独立 Release](https://github.com/Carlor-Official/Mengka-User-System/releases/tag/v2.0.17-native-ipc)发布。包版本为 `2.0.17`，最低框架版本为 `2.4.1`，传输为 `native-ipc-v1`。安装前下载同一 Release 的 `linux-amd64-native.json` 与 `SHA256SUMS.txt` 校验文件；安装时只从「插件 → 插件导入」上传，不要把包内程序拆出运行，也不要将原生插件端口暴露到公网。
