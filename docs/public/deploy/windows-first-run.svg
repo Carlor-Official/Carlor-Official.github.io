@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Windows 首次启动初始化本地管理员示意图</title>
+  <desc id="desc">首次打开 WebUI，输入本地管理员账号和密码并进入概览。</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#edf5ff"/><stop offset="1" stop-color="#fff8f3"/></linearGradient><filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#1e3560" flood-opacity=".14"/></filter></defs>
+  <rect width="1200" height="720" rx="24" fill="url(#bg)"/>
+  <rect x="58" y="44" width="1084" height="632" rx="20" fill="#fff" filter="url(#shadow)"/>
+  <rect x="58" y="44" width="1084" height="52" rx="20" fill="#f5f8fc"/>
+  <circle cx="88" cy="70" r="7" fill="#ff6b6b"/><circle cx="112" cy="70" r="7" fill="#ffc857"/><circle cx="136" cy="70" r="7" fill="#3ecf8e"/>
+  <rect x="184" y="58" width="870" height="25" rx="12" fill="#e5ecf6"/>
+  <text x="210" y="76" font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="14" fill="#607089">http://127.0.0.1:6099/setup</text>
+  <rect x="110" y="132" width="650" height="480" rx="18" fill="#f8fbff" stroke="#d8e4f2"/>
+  <text x="160" y="198" font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="31" font-weight="700" fill="#192a45">初始化本地管理员</text>
+  <text x="160" y="232" font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="16" fill="#718096">首次启动只需配置一次，凭据保存在当前实例本地。</text>
+  <text x="160" y="288" font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="14" fill="#52637b">管理员账号</text>
+  <rect x="160" y="302" width="550" height="52" rx="10" fill="#fff" stroke="#cbd8e8"/><text x="184" y="335" font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="16" fill="#9aa8ba">admin</text>
+  <text x="160" y="392" font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="14" fill="#52637b">管理员密码</text>
+  <rect x="160" y="406" width="550" height="52" rx="10" fill="#fff" stroke="#cbd8e8"/><text x="184" y="439" font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="18" letter-spacing="4" fill="#273a59">••••••••••</text>
+  <rect x="160" y="494" width="260" height="54" rx="12" fill="#2f73ff"/><text x="230" y="529" font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="17" font-weight="700" fill="#fff">创建管理员并进入</text>
+  <rect x="820" y="166" width="260" height="92" rx="16" fill="#eaf2ff"/><circle cx="854" cy="212" r="22" fill="#2f73ff"/><text x="847" y="220" font-family="Arial" font-size="20" font-weight="700" fill="#fff">1</text><text x="890" y="205" font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="15" font-weight="700" fill="#24539b">不要填官网令牌</text><text x="890" y="229" font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="13" fill="#587091">这是本地初始化。</text>
+  <rect x="820" y="284" width="260" height="112" rx="16" fill="#fff5e8"/><circle cx="854" cy="330" r="22" fill="#f29c38"/><text x="847" y="338" font-family="Arial" font-size="20" font-weight="700" fill="#fff">2</text><text x="890" y="323" font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="15" font-weight="700" fill="#9a5b19">密码只在本机保存</text><text x="890" y="348" font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="13" fill="#866b49">不要截图或提交到仓库。</text>
+  <rect x="820" y="422" width="260" height="112" rx="16" fill="#e9faf2"/><circle cx="854" cy="468" r="22" fill="#26a269"/><text x="847" y="476" font-family="Arial" font-size="20" font-weight="700" fill="#fff">3</text><text x="890" y="461" font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="15" font-weight="700" fill="#19794c">完成后进入概览</text><text x="890" y="486" font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="13" fill="#53816a">再添加节点和 QQ 账号。</text>
+</svg>

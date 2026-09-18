@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 720" role="img" aria-labelledby="title desc">
+  <title id="title">Linux 解压、授权与首次启动示意图</title>
+  <desc id="desc">Linux 服务器执行下载、解压、chmod 和启动命令，再打开 WebUI。</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#101c30"/><stop offset="1" stop-color="#1c3151"/></linearGradient><filter id="shadow" x="-10%" y="-10%" width="120%" height="130%"><feDropShadow dx="0" dy="12" stdDeviation="18" flood-color="#000" flood-opacity=".28"/></filter></defs>
+  <rect width="1200" height="720" rx="24" fill="url(#bg)"/>
+  <rect x="54" y="46" width="1092" height="610" rx="18" fill="#0b1220" filter="url(#shadow)"/>
+  <rect x="54" y="46" width="1092" height="50" rx="18" fill="#17243a"/>
+  <circle cx="86" cy="72" r="7" fill="#ff6b6b"/><circle cx="110" cy="72" r="7" fill="#ffc857"/><circle cx="134" cy="72" r="7" fill="#3ecf8e"/><text x="180" y="78" font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="15" fill="#bdcbe0">root@ubuntu: /opt/mengka-nt</text>
+  <text x="90" y="146" font-family="Cascadia Mono,Consolas,monospace" font-size="18" fill="#8da6c7">$ </text><text x="122" y="146" font-family="Cascadia Mono,Consolas,monospace" font-size="18" fill="#f4f7fb">mkdir -p /opt/mengka-nt &amp;&amp; cd /opt/mengka-nt</text>
+  <text x="90" y="194" font-family="Cascadia Mono,Consolas,monospace" font-size="18" fill="#8da6c7">$ </text><text x="122" y="194" font-family="Cascadia Mono,Consolas,monospace" font-size="18" fill="#f4f7fb">tar -xzf mengka-nt-2.4.1-linux-amd64.tar.gz</text>
+  <text x="90" y="242" font-family="Cascadia Mono,Consolas,monospace" font-size="18" fill="#8da6c7">$ </text><text x="122" y="242" font-family="Cascadia Mono,Consolas,monospace" font-size="18" fill="#f4f7fb">chmod +x ./mengka-nt</text>
+  <text x="90" y="290" font-family="Cascadia Mono,Consolas,monospace" font-size="18" fill="#8da6c7">$ </text><text x="122" y="290" font-family="Cascadia Mono,Consolas,monospace" font-size="18" fill="#f4f7fb">./mengka-nt</text>
+  <rect x="90" y="330" width="970" height="86" rx="12" fill="#123a2d"/><text x="120" y="366" font-family="Cascadia Mono,Consolas,monospace" font-size="16" fill="#84e6b1">WebUI ready</text><text x="120" y="394" font-family="Cascadia Mono,Consolas,monospace" font-size="16" fill="#d7f9e6">open http://127.0.0.1:6099/ to initialize local admin</text>
+  <rect x="90" y="456" width="970" height="142" rx="14" fill="#182944" stroke="#2d4a72"/><text x="122" y="494" font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="16" font-weight="700" fill="#d9e7fb">服务器在远程机时</text><text x="122" y="528" font-family="Segoe UI,Microsoft YaHei,sans-serif" font-size="15" fill="#a8bdd8">不要把管理端口直接暴露到公网；通过 SSH 隧道或 Nginx HTTPS 访问：</text><text x="122" y="565" font-family="Cascadia Mono,Consolas,monospace" font-size="16" fill="#f5d98b">ssh -L 6099:127.0.0.1:6099 user@server</text>
+</svg>
