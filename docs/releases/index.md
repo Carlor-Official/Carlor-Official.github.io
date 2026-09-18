@@ -15,13 +15,13 @@
 
 框架 v2.4.1 的核心变化包括原生 IPC 插件运行、插件导入权限核对、配置管理与生命周期控制；v2.4.0 的本地管理员、协议目录和算法版本策略继续保留。
 
-### v2.4.1 原生用户系统包
+### 用户系统独立原生外发包
 
-已验证的萌卡 NT 用户系统原生托管包随框架 v2.4.1 一起发布：
+用户系统不是框架组成部分，已验证的原生外发包在用户系统自己的 Release 中独立发布：
 
-- [Linux AMD64 外发包](https://github.com/Carlor-Official/Mengka-NT/releases/download/v2.4.1/mengka-user-system-2.0.17-managed-native-linux-amd64.tar.gz)
-- [包清单与 SHA-256](https://github.com/Carlor-Official/Mengka-NT/releases/download/v2.4.1/linux-amd64-native.json)
-- [完整校验文件](https://github.com/Carlor-Official/Mengka-NT/releases/download/v2.4.1/SHA256SUMS.txt)
+- [用户系统独立 Release v2.0.17-native-ipc](https://github.com/Carlor-Official/mengka-user-system-source/releases/tag/v2.0.17-native-ipc)
+- [Linux AMD64 外发包](https://github.com/Carlor-Official/mengka-user-system-source/releases/download/v2.0.17-native-ipc/mengka-user-system-2.0.17-managed-native-linux-amd64.tar.gz)
+- [包清单与 SHA-256](https://github.com/Carlor-Official/mengka-user-system-source/releases/download/v2.0.17-native-ipc/linux-amd64-native.json)
 
 该包版本为 `2.0.17`，最低框架版本为 `2.4.1`，传输方式为 `native-ipc-v1`。下载后进入框架「插件 → 插件导入」上传，核对包内权限清单并确认安装；框架不会从官网自动下载或更新插件。
 

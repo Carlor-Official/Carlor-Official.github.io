@@ -22,7 +22,7 @@ v2.4.0 起，首次访问新实例或旧官网版本升级后的实例，会直�
 
 框架 v2.4.1 的原生插件使用 `native-ipc-v1`，不需要开放插件端口，也不需要填写 WebSocket 地址或服务令牌。以用户系统为例：
 
-1. 从 [v2.4.1 官方 Release](https://github.com/Carlor-Official/Mengka-NT/releases/tag/v2.4.1) 下载对应的外发包、包清单和 `SHA256SUMS.txt`；
+1. 从[用户系统独立 Release](https://github.com/Carlor-Official/mengka-user-system-source/releases/tag/v2.0.17-native-ipc)下载对应的外发包、包清单和 `SHA256SUMS.txt`；框架安装包仍从[框架 v2.4.1 Release](https://github.com/Carlor-Official/Mengka-NT/releases/tag/v2.4.1)获取；
 2. 在本地校验包的 SHA-256，并确认包内 `mengka-plugin.json` 的 `min_framework` 为 `2.4.1`；
 3. 登录框架管理端，打开「插件 → 插件导入」，上传 `.tar.gz`/`.zip` 成品包；
 4. 阅读权限差异和可信来源提示后确认安装，在插件卡片中完成配置并启动；
