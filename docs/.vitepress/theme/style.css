@@ -146,3 +146,61 @@ body { text-rendering: optimizeLegibility; }
 @media (prefers-reduced-motion: reduce) {
   .mk-home *, .mk-home *::before, .mk-home *::after { transition: none !important; animation: none !important; }
 }
+.api-protocol-support {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px 12px;
+  margin: 0 0 18px;
+  padding: 12px 14px;
+  border: 1px solid color-mix(in srgb, var(--vp-c-brand-1) 30%, var(--vp-c-divider));
+  border-radius: 12px;
+  background: var(--vp-c-brand-soft);
+}
+
+.api-protocol-support__label {
+  color: var(--vp-c-text-2);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: .04em;
+}
+
+.api-protocol-support strong {
+  color: var(--vp-c-brand-1);
+  font-size: 14px;
+  white-space: nowrap;
+}
+
+.api-protocol-support small {
+  margin-left: auto;
+  color: var(--vp-c-text-2);
+}
+
+.api-protocol-support[data-availability="android"] {
+  border-color: color-mix(in srgb, var(--vp-c-warning-1) 35%, var(--vp-c-divider));
+  background: var(--vp-c-warning-soft);
+}
+
+.api-protocol-support[data-availability="android"] strong {
+  color: var(--vp-c-warning-1);
+}
+
+.api-protocol-support[data-availability="linux"] {
+  border-color: color-mix(in srgb, var(--vp-c-success-1) 35%, var(--vp-c-divider));
+  background: var(--vp-c-success-soft);
+}
+
+.api-protocol-support[data-availability="linux"] strong {
+  color: var(--vp-c-success-1);
+}
+
+@media (max-width: 640px) {
+  .api-protocol-support {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .api-protocol-support small {
+    margin-left: 0;
+  }
+}

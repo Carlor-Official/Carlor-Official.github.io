@@ -8,6 +8,8 @@
     "build": "vitepress build docs",
     "preview": "vitepress preview docs",
     "test": "node --test tests/*.test.mjs",
+    "sync:api-protocols": "node scripts/sync-api-protocol-labels.mjs",
+    "check:api-protocols": "node scripts/sync-api-protocol-labels.mjs --check && node scripts/verify-api-protocol-labels.mjs",
     "check": "npm test && npm run build"
   },
   "devDependencies": {
