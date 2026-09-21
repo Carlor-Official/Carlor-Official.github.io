@@ -192,17 +192,19 @@ const result = await api.cache_login(self_id)
 
 `cache_invalid` 为 `true` 时，改用 `login_account`。
 
-## Linux 登录
+## Linux 登录（v2.4.3）
+
+当前 Linux QQ 运行协议固定为 `3.2.32`；`3.2.33` 已从协议目录和算法路由移除。升级时，原来选择 `3.2.33` 的 Linux 账号会自动迁移到 `3.2.32`，账号、节点、设备身份和已有票据不会被删除。
 
 使用 `const linux = api.forProtocol('linuxqq')`，通过 `linux.check_cache(self_id)`、`linux.cache_login(self_id)` 检查并恢复缓存。缓存明确失效时，由 `linux.login_account(self_id)` 启动原生二维码登录，再用 `linux.query_login_qr_status` 按返回凭据查询；失效后用 `linux.create_login_qr` 刷新。二维码参数见对应 API，不能混用 Android 安全验证的 `guarantee_token`。
 
 在线 Android 账号的 `scan_qr` / `auth_qr` 可扫描并授权该登录二维码，但它们不是 Linux 创建二维码的接口。扫码授权成功后仍需查询原登录会话，确认最终上线。停止使用 `linux.stop_account_login(self_id)`，不会删除账号或缓存。
 
 
-## Linux 免扫登录（v2.1.0）
+## Linux 免扫登录（v2.4.3）
 
 账号页点击 Linux 账号的“登录”后，先选择“免扫登录”或“扫码登录”。同 QQ 的安卓协议账号已经登录时，免扫登录可用；没有在线安卓会话时按钮禁用，只能人工扫码。登录途中遇到手机确认或风控时，按返回提示处理。
 
-免扫登录复用现有协议接口：Linux 的 `wtlogin_trans_emp` 取得二维码，在线安卓账号调用 `scan_qr` 和 `auth_qr` 完成授权，再由 Linux 查询并完成二维码登录。授权接口以安卓账号调用，不能把 Linux 的 `client_type` 传给安卓授权接口。不要并发发起多次登录或在失败后无限自动重放。
+扫码与免扫使用同一条 Linux `3.2.32` 登录链路：Linux 会话先创建二维码并保存本次会话凭据；人工扫码由手机 QQ 完成，免扫则由同 QQ 的在线 Android 框架账号依次调用 `scan_qr` 和 `auth_qr`。两种方式最终都由原 Linux 会话查询并完成登录，不会切换到 Android 登录包，也不会创建第二条二维码会话。授权接口以 Android 账号调用，不能把 Linux 的 `client_type` 传给 Android 授权接口。不要并发发起多次登录或在失败后无限自动重放。
 
 等级任务的“电脑QQ在线”已由框架封装这条流程，插件通过 `execute_level_task_selection` 执行即可，不需要另外实现登录循环。登录建立与 QQ 累计在线时长是两个阶段。

@@ -61,9 +61,9 @@ if (!result.refreshed) console.warn(result.refreshError)
 覆盖真实本地 WS 认证与 HTTP 的双向设置/缓存一致性、离线读取与实时刷新失败、平台隔离、只读执行日期、付费/完成/协议不可执行过滤、执行后刷新失败不重放、框架本地时间与跨日调度，以及正反向 Node SDK 参数和响应。v2.0.9 此项接口验收未调用真实 QQ 账号任务；用户插件本身的适配与计划迁移仍由插件开发任务完成。
 
 
-## v2.1.0：电脑 QQ 在线
+## v2.4.3：电脑 QQ 在线
 
-`电脑QQ在线` 已支持手动补挂和框架定时计划。目标仍传在线安卓账号的 `self_id` 和 `client_type: 'android'`；框架使用同 QQ 安卓会话授权 Linux 免扫登录。已有 Linux 在线会话直接复用，已有账号的节点和设备不被覆盖；没有 Linux 账号时，框架生成独立设备配置并沿用安卓账号的登录节点创建 Linux 账号。
+`电脑QQ在线` 已支持手动补挂和框架定时计划。目标仍传在线 Android 账号的 `self_id` 和 `client_type: 'android'`；框架使用同 QQ Android 会话授权 Linux `3.2.32` 免扫登录。该任务与账号页共用同一 Linux 二维码、扫码、授权、查询链路，不使用 Android 登录包替代 Linux 登录。已有 Linux 在线会话直接复用，已有账号的节点和设备不被覆盖；没有 Linux 账号时，框架生成独立设备配置并沿用 Android 账号的登录节点创建 Linux 账号。
 
 登录成功只表示开始或继续累计电脑在线时长，不会将任务强行标记完成。加速与完成状态以 QQ 返回的任务面板为准。安卓离线、授权拒绝、二维码过期或登录失败都会返回错误；请查看账号状态和日志，必要时从账号页人工扫码完成验证。框架已有等级门槛、任务过滤和计划执行规则继续生效。
 
@@ -91,6 +91,8 @@ if (!result.refreshed) console.warn(result.refreshError)
 | 浏览QQ空间访客页面 | 访问本账号访客页面并提交任务 |
 | QQ大会员空间专属点赞 | 发布仅自己可见、24 小时后自动删除的说说，再执行大会员特效点赞 |
 | QQ音乐绿钻每日签到 | 使用本账号音乐登录态调用会员接口，实际成长值以音乐会员页面为准 |
+
+“听歌领金币兑换加速”不增加公开参数。v2.4.3 同时兼容 QQ 音乐余额响应中的 `pointBalance` 与 `totalScore`；调用方仍只按任务标题执行，并以刷新后的 QQ 等级面板判断完成状态。
 
 共享面板新增 `payload.member_info.member_task_list`。每项包含 `title`、`category: 'membership'`、`membership_group`、`available`、`can_execute`、`is_done`、`status_text`、`execution_message` 和 `attempted_today`。不要把会员任务计入 QQ 加速天数。
 

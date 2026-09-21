@@ -6,6 +6,10 @@
 本文档沿用萌卡 NT 官方 API 参考。请使用与目标框架 Release 相匹配的 SDK；管理能力通过 `get_plugin_context().available_actions` 查询，不要仅凭官网列表假设目标实例已支持全部功能。QQ 宠物接口使用对象参数；已删除的旧服务字段和旧 action 不恢复兼容。
 :::
 
+::: tip v2.4.3 协议基线
+Linux QQ 仅保留 `3.2.32`。扫码登录、同 QQ Android 免扫授权和等级任务“电脑QQ在线”共用同一 Linux 二维码会话；`3.2.33` 及其算法路由已移除。业务 API 的公开参数不变，框架内部按实际协议字段组包。
+:::
+
 ::: warning 2.0 管理 API 切割
 插件服务通过框架 Token 认证后可直接调用管理 API。`system_management` 和 `allowed_actions` 已从服务配置与返回契约删除；`admin_base_url` 只用于管理员 SSO 和管理端入口，不参与 API 授权。插件应检查 `get_plugin_context().management_api_version === 1`，不得降级调用已删除的旧接口。
 :::
@@ -25,7 +29,7 @@ await linuxApi.send_group_msg(self_id, group_id, message)
 
 直接发送账号 action 时，显式使用 `client_type: 'android' | 'linuxqq'`。SDK 无协议作用域的便捷方法默认选择 Android；不要依赖原始请求省略协议，新 action 会拒绝缺少协议的请求，同一 QQ 双协议在线也不会自动切换会话。
 
-Linux QQ 账号仍通过统一的 `/api/v1/accounts` 创建和管理。控制台登录时，由框架调用 `/api/v1/accounts/:self_id/sso/WTLoginQRCode` 创建二维码，再通过 `/api/v1/accounts/:self_id/sso/WTLoginQRCodeQuery` 查询状态；这两个接口属于登录后的管理端 REST 链路，不是插件 WebSocket action。不要使用 `scan_qr`、`auth_qr` 或 Android 安全验证二维码接口代替 Linux 登录链路。
+Linux QQ 账号仍通过统一的 `/api/v1/accounts` 创建和管理。控制台登录时，由框架调用 `/api/v1/accounts/:self_id/sso/WTLoginQRCode` 创建二维码，再通过 `/api/v1/accounts/:self_id/sso/WTLoginQRCodeQuery` 查询状态；这两个接口属于登录后的管理端 REST 链路，不是插件 WebSocket action。免扫时框架内部使用同 QQ 在线 Android 账号的 `scan_qr`、`auth_qr` 授权这一个二维码，但调用方不能用它们代替 Linux 的创建、查询和最终登录步骤。
 
 ### 插件调用与事件
 

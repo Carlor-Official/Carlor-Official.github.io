@@ -1,6 +1,6 @@
 # scan_qr
 
-使用在线 Android Bot 识别一个 QQ 登录二维码。本接口是 Android 会话能力，不属于 Linux 原生账号管理链路。
+使用在线 Android Bot 识别一个 QQ 登录二维码。本接口由 Android 会话执行，不负责创建或查询 Linux 登录会话。v2.4.3 的 Linux 免扫登录会在框架内部使用本接口扫描同一条 Linux `3.2.32` 二维码；插件不需要自行编排免扫流程。
 
 ## 调用
 
@@ -22,8 +22,8 @@ const result = await androidApi.scan_qr(123456789, qrK)
 
 不要传 `client_type: 'linuxqq'`。本接口不要自动高频重试：收到明确失败或二维码过期后，应停止当前流程并由用户重新获取二维码。
 
-## v2.0.6 修复
+## 协议字段
 
-v2.0.6 修复平板扫码的 `-10117`（AppID 无效）：读取同版本 Phone 协议的 `appid`，不把 `subappid` 当作 AppID，也不借用其他版本。协议目录必须保留相同 `ver` 的 Phone 项，缺少时明确报错。
+v2.4.3 按当前 Android 协议目录的实际 `appid`、`subappid` 与 `magic` 字段组包，并保持 Linux `3.2.32` 二维码会话参数不变。调用方不要自行替换 AppID、拼装扫码包或借用其他版本字段。
 
-该修复已通过两个 Android 平板测试账号授权各自 Linux 登录的完整流程验证；已发布 v2.0.5 尚不包含此修复。扫码成功仍需继续授权并查询原登录流程的最终状态，不能仅凭 `code: 0` 宣称 Linux 已上线。
+扫码成功仍需继续授权并查询原 Linux 登录流程的最终状态，不能仅凭 `code: 0` 宣称 Linux 已上线。

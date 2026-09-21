@@ -46,14 +46,15 @@ await linuxApi.send_group_msg(self_id, group_id, message)
 
 未列出的 Bot 业务 action 默认仅 Android 可用。Linux 请求遇到未实现 action 会返回 `Linux QQ 暂不支持 action: <action>`，不会伪造成功结果。
 
-## 两套登录流程
+## 两套登录流程（v2.4.3）
 
 Android 使用 `add_account`、`login_account`、安全验证、短信和登录安全二维码。Linux QQ 不接收 QQ 密码、Android 协议 ID 或 Android 设备指纹，使用以下独立流程：
 
-Linux 登录完整使用管理端 `/admin/linux-qq/accounts` 原生链路：保存账号后由登录管理器生成二维码、以附件设定的节奏轮询并完成登录。插件 API 不提供第二套创建二维码或查询接口，避免与管理器同时轮询同一会话。
+Linux 登录固定使用 `3.2.32`；`3.2.33` 已从协议目录和算法路由移除。升级时旧 `3.2.33` 账号会自动迁移到 `3.2.32`，不会删除账号、节点、设备身份或已有票据。
 
-`scan_qr` 与 `auth_qr` 属于 Android Bot 的二维码操作能力，不参与 Linux 原生登录管理器的自动扫码流程。
-4. 已保存 Linux 票据时，可使用 `cache_login` 发起自动登录。
+Linux 登录完整使用统一账号管理与原生二维码会话：管理端保存账号后，由 Linux 登录管理器创建二维码、查询状态并完成登录。人工扫码和免扫不会建立两套 Linux 会话；免扫只是由同 QQ 的在线 Android Bot 对这一个二维码依次执行 `scan_qr`、`auth_qr`，最终上线仍由 Linux 会话确认。插件 API 不应自行另建登录轮询。
+
+已保存 Linux 票据时，可使用 `cache_login` 发起自动登录。缓存明确失效后才进入二维码流程；网络超时或签名服务临时失败不等于缓存失效，不应自动重复授权。
 
 不要用 `login_account` 给 Linux QQ 发起密码登录，也不要把 Linux 二维码交给 Android 安全验证接口 `create_login_qr` / `query_login_qr_status`。
 
