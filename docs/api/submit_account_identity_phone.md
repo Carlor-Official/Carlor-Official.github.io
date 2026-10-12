@@ -2,7 +2,7 @@
 
 向指定账号的身份验证流程提交手机号并请求下一步短信验证。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.submit_account_identity_phone(
@@ -23,3 +23,7 @@ const result = await api.submit_account_identity_phone(
 | `protocol` | string | 否 | `android` 或 `linux`，默认 `android` |
 
 `area_code` 默认 `86`。手机号属于敏感信息，不应写入 URL、前端持久缓存或业务日志。
+
+## 返回值
+
+返回请求短信验证后的响应对象；验证失败时抛出错误。

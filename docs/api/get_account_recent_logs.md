@@ -2,7 +2,7 @@
 
 获取指定 QQ 与协议最近的账号运行日志。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.get_account_recent_logs(self_id, 'linux')

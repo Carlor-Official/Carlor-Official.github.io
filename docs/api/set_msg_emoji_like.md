@@ -2,11 +2,13 @@
 
 为群消息添加或取消指定表情回应。
 
-## 调用
+## 调用方式
 
 ```js
 await api.set_msg_emoji_like(self_id, message_id, emoji_id, true)
 ```
+
+## 参数
 
 | 参数 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
@@ -16,3 +18,7 @@ await api.set_msg_emoji_like(self_id, message_id, emoji_id, true)
 | `set` | boolean | 否 | `true` 添加，`false` 取消 |
 
 仅支持群消息。
+
+## 返回值
+
+成功返回 `null`。

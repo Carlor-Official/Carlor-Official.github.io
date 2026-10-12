@@ -2,7 +2,7 @@
 
 设置当前 QQ Bot 的头像。后端不发送媒体 OIDB 请求，图片会直接通过 Highway HTTP 上传。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.set_qq_avatar(self_id, file_path)

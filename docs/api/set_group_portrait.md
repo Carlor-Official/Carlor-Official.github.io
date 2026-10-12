@@ -1,8 +1,8 @@
 # set_group_portrait
 
-设置指定群聊的头像。萌卡NT会按 QQ Android 9.2.70 的 Highway `command_id=3000` 上传链路，先获取当前账号的 Highway 会话，再将公开群号转换为 QQ 内部群 UIN 后提交图片。
+设置指定群聊的头像。萌卡NT会按 QQ Android 的 Highway `command_id=3000` 上传链路，先获取当前账号的 Highway 会话，再将公开群号转换为 QQ 内部群 UIN 后提交图片。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.set_group_portrait(self_id, group_id, file)
@@ -32,7 +32,7 @@ const result = await api.set_group_portrait(self_id, group_id, file)
 }
 ```
 
-`result` 为 `0` 表示 QQ 已接受上传；非零值会作为调用错误返回。权限不足时 QQ 会返回 `No Perm`，不会被框架伪装为上传成功。群头像 CDN 可能有短暂缓存。
+`result=0` 表示上传被接受。权限不足时返回 `No Perm`；头像 CDN 可能延迟更新。
 
 ## 示例
 

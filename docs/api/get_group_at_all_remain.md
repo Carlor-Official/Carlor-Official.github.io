@@ -2,6 +2,8 @@
 
 查询当前 QQ 在指定群聊中使用 `@全体成员` 的权限与剩余次数。
 
+## 调用方式
+
 ```js
 const result = await api.get_group_at_all_remain({
   self_id: 106606,
@@ -9,10 +11,14 @@ const result = await api.get_group_at_all_remain({
 })
 ```
 
-| 字段 | 类型 | 必填 | 说明 |
+## 参数
+
+| 参数 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | `self_id` | number | 是 | 执行查询的在线 Bot QQ 号 |
 | `group_id` | number | 是 | 目标群号 |
+
+## 返回值
 
 成功时返回：
 
@@ -27,6 +33,6 @@ const result = await api.get_group_at_all_remain({
 }
 ```
 
-次数和权限由 QQ 服务端根据账号身份、群设置与当前限额实时计算，框架不会自行推算。
+次数和权限由 QQ 服务端返回。
 
 该接口只读取权限与限额，不会发送 `@全体成员` 消息或修改群设置。当前仅支持 Android QQ。

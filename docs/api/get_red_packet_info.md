@@ -2,7 +2,7 @@
 
 查询群消息中 `red_packet` 消息段对应的 QQ 红包详细信息。
 
-## 调用
+## 调用方式
 
 ```js
 const redPacket = event.message.find(segment => segment.type === 'red_packet')
@@ -30,8 +30,6 @@ const result = await api.get_red_packet_info(
 | `red_packet.channel` | number | 否 | 红包渠道，缺省为 `0` |
 | `red_packet.pay_flag` | number | 是 | 红包支付标记，取自收到的 `red_packet` 消息段 |
 | `red_packet.hb_from` | number | 是 | 红包来源标记，取自收到的 `red_packet` 消息段 |
-
-## 原始 action 参数
 
 未使用官方 SDK 时，当前后端接收的是展开后的红包字段，不接收嵌套的 `red_packet` 对象：
 

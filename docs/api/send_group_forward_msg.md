@@ -2,7 +2,7 @@
 
 上传文本合并转发消息并返回可发送的合并转发消息段。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.send_group_forward_msg(
@@ -33,7 +33,7 @@ NapCat 标准节点结构：
 }
 ```
 
-也兼容萌卡 NT 旧版扁平节点：
+也支持以下扁平节点格式：
 
 ```js
 {

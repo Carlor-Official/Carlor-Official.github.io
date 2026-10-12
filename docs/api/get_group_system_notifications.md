@@ -2,7 +2,7 @@
 
 获取 Bot 的群聊系统通知列表。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.get_group_system_notifications(self_id)

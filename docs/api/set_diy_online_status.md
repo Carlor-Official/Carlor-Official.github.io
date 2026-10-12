@@ -1,8 +1,8 @@
 # set_diy_online_status
 
-设置当前在线 Bot 的自定义状态图标和文字。底层使用 QQ Android 9.2.70 的真实自定义状态请求。
+设置当前在线 Bot 的自定义状态图标和文字。底层使用 QQ Android 的真实自定义状态请求。
 
-## 调用
+## 调用方式
 
 ```js
 const message = await api.set_diy_online_status(

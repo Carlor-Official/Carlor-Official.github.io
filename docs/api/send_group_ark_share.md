@@ -1,8 +1,8 @@
 # send_group_ark_share
 
-与 `ArkShareGroup` 使用同一套萌卡 NT 原生群聊分享链路，参数与返回值一致。
+与 `ArkShareGroup` 使用相同的群分享接口，参数与返回值一致。
 
-## 调用
+## 调用方式
 
 ```js
 const ark = await api.send_group_ark_share(self_id, group_id)
@@ -16,3 +16,7 @@ const ark = await api.send_group_ark_share(self_id, group_id)
 | `group_id` | number | 是 | 当前账号已加入的群号 |
 
 详见 [ArkShareGroup](/api/ArkShareGroup.html)。
+
+## 返回值
+
+返回群分享 Ark JSON 字符串。

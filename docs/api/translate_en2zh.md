@@ -2,6 +2,18 @@
 
 使用 QQ Android 的批量翻译服务，将英文文本翻译为中文。
 
+## 调用方式
+
+```json
+{
+  "action": "translate_en2zh",
+  "params": {
+    "self_id": 1060221,
+    "words": ["hello", "world"]
+  }
+}
+```
+
 ## 参数
 
 | 参数 | 类型 | 必填 | 说明 |
@@ -18,15 +30,3 @@
 ```
 
 返回列表与请求列表顺序一致；如果 QQ 服务器返回数量不匹配，框架会直接返回错误，不会用空文本补齐。
-
-## 调用示例
-
-```json
-{
-  "action": "translate_en2zh",
-  "params": {
-    "self_id": 1060221,
-    "words": ["hello", "world"]
-  }
-}
-```

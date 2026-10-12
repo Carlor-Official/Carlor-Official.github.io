@@ -2,7 +2,7 @@
 
 读取指定 QQ 与协议的离线邮件通知设置。
 
-## 调用
+## 调用方式
 
 ```js
 const preference = await api.get_account_offline_notification(self_id, 'linux')

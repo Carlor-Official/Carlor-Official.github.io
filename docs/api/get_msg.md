@@ -2,12 +2,20 @@
 
 读取框架当前进程已观察到的 OneBot 消息数据，不请求 QQ 历史消息。
 
+## 调用方式
+
+```js
+const message = await api.get_msg(self_id, message_id)
+```
+
 ## 参数
 
 | 参数 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | `self_id` | number | 是 | 在线 Bot QQ 号 |
 | `message_id` | number | 是 | 消息事件中的 `message_id`；兼容传近期 `msg.seq` |
+
+## 返回值
 
 返回 `message_type`、`message_id`、`message_seq`、发送者、标准消息段、原始文本，以及群消息可用的 `group_id`。
 

@@ -1,8 +1,8 @@
 # send_ark_share
 
-与 `ArkSharePeer` 使用同一套萌卡 NT 原生联系人分享链路，参数与返回值一致。
+与 `ArkSharePeer` 使用相同的联系人分享接口，参数与返回值一致。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.send_ark_share(self_id, user_id, phone_number)
@@ -17,3 +17,7 @@ const result = await api.send_ark_share(self_id, user_id, phone_number)
 | `phone_number` | string | 否 | 卡片中显示的手机号 |
 
 详见 [ArkSharePeer](/api/ArkSharePeer.html)。
+
+## 返回值
+
+返回联系人分享 Ark 数据，字段见 [ArkSharePeer](/api/ArkSharePeer.html#返回值)。

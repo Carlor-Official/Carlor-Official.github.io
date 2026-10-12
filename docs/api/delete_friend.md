@@ -2,7 +2,7 @@
 
 删除指定好友。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.delete_friend(self_id, target_uin)

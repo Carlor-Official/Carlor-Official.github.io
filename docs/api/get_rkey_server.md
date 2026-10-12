@@ -2,7 +2,7 @@
 
 以服务信息结构返回框架后台缓存中的私聊和群聊媒体 RKey，不会在 API 调用阶段新增 QQ 协议请求。
 
-## 调用
+## 调用方式
 
 ```js
 const server = await api.get_rkey_server(self_id)

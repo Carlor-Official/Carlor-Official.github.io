@@ -2,11 +2,15 @@
 
 一次读取插件账号管理页所需的框架快照，避免分别请求账号、协议、指纹和节点时得到不同时刻的数据。
 
-## 调用
+## 调用方式
 
 ```js
 const context = await api.get_account_management_context()
 ```
+
+## 参数
+
+无。
 
 ## 返回值
 

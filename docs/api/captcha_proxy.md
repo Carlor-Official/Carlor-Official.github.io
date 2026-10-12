@@ -2,7 +2,7 @@
 
 反向代理滑块页面发往腾讯验证服务的请求，由后端转发到 `t.captcha.qq.com`，并自动使用节点代理与登录会话 cookie。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.captcha_proxy(

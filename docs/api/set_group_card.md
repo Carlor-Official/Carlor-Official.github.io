@@ -4,7 +4,7 @@
 
 修改其他成员时，当前 Bot 需要是群主或管理员；普通成员只能修改自己的群名片。最终权限由 QQ 群设置和服务器校验决定。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.set_group_card(

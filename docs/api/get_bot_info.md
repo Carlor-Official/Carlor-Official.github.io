@@ -2,7 +2,7 @@
 
 获取指定协议 Bot 的运行信息。框架根据 `self_id + client_type` 定位账号，并使用账号自己的登录节点。账号可以处于离线、登录中或在线状态。
 
-## 调用
+## 调用方式
 
 ```js
 const bot = await api.forProtocol('android').get_bot_info(self_id)

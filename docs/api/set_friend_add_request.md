@@ -2,7 +2,7 @@
 
 处理好友申请。框架按所选账号协议回读当前申请列表，匹配真实且待处理的 `flag`：Android 使用对应好友系统消息，Linux 使用原生申请查询与处理协议。不会借用另一个 Android 登录会话处理 Linux 请求。
 
-## 调用
+## 调用方式
 
 ```js
 await api.call('set_friend_add_request', {
@@ -24,7 +24,7 @@ await api.call('set_friend_add_request', {
 | `approve` | boolean / string | 否 | 是否同意，默认 `true`；字符串 `"false"` 表示拒绝 |
 | `remark` | string | 否 | 同意好友申请时设置的好友备注 |
 
-## 返回
+## 返回值
 
 成功时返回空数据；申请已处理、`flag` 过期或不存在时返回明确错误。
 

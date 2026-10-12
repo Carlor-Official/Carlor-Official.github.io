@@ -2,7 +2,7 @@
 
 取消对好友空间动态的点赞。
 
-## 调用
+## 调用方式
 
 ```js
 api.unlike_qzone_feed(self_id, feed)

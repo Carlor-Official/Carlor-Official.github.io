@@ -2,7 +2,7 @@
 
 设置或清除群聊成员的专属头衔。框架解析目标成员的原生 UID，使用当前账号的登录会话执行；不会修改成员昵称或群名片。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.set_group_special_title(

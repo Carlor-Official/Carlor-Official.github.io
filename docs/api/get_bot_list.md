@@ -2,7 +2,7 @@
 
 获取当前框架实例中的全部 Bot 账号。插件 WS 服务不绑定账号节点；返回项中的 `node_id` 是账号自己的登录节点。
 
-## 调用
+## 调用方式
 
 ```js
 const bots = await api.get_bot_list()
@@ -10,7 +10,7 @@ const bots = await api.get_bot_list()
 
 ## 参数
 
-无。2.0.3 已删除 `all_nodes`，传入任何参数都会失败。
+无。
 
 ## 返回值
 

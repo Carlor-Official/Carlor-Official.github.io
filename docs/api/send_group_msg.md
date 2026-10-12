@@ -2,7 +2,7 @@
 
 发送群聊消息。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.send_group_msg(self_id, group_id, message)

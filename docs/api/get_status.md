@@ -2,7 +2,7 @@
 
 获取当前在线 Bot 的连接状态与基础运行计数。
 
-## 调用
+## 调用方式
 
 ```js
 const status = await api.get_status(self_id)

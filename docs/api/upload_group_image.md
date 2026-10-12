@@ -2,7 +2,7 @@
 
 上传群聊图片，并返回可直接发送的图片消息段。
 
-## 调用
+## 调用方式
 
 ```js
 const image = await api.upload_group_image(

@@ -1,8 +1,8 @@
 # set_self_longnick
 
-设置或清空当前 QQ Bot 的个性签名。实现严格复用 QQ Android 9.2.70 的真实链路：先通过 `Signature.auth` 审核内容，再把服务端返回的 key 和审核后签名内容写入 `ProfileService.SetRichSig`。清空签名使用客户端独立的 `OidbSvc.0x510_0` 请求。
+设置或清空当前账号的个性签名。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.set_self_longnick(self_id, longNick)

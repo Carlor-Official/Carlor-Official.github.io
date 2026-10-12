@@ -1,41 +1,51 @@
-# API 总览
+# API 参考
 
-正向与反向 WebSocket SDK 提供相同的 API。除特别注明外，所有 API 都返回 Promise，成功时解析为业务数据，失败时抛出错误。
+通过已认证的 WebSocket 服务调用接口。Node.js SDK 的正向与反向连接使用相同方法；成功时 Promise 返回业务数据，失败时抛出异常。
 
-::: tip 当前运行契约
-本文档沿用萌卡 NT 官方 API 参考。请使用与目标框架 Release 相匹配的 SDK；管理能力通过 `get_plugin_context().available_actions` 查询，不要仅凭官网列表假设目标实例已支持全部功能。QQ 宠物接口使用对象参数；已删除的旧服务字段和旧 action 不恢复兼容。
-:::
-
-::: tip v2.5.9 协议基线
-Android 仅保留 QQ 9.1.70，Linux 使用 3.2.32。Linux 管理端支持免扫、扫码和账号密码登录；等级任务与登录凭证接口按 `client_type` 区分协议。部分旧任务执行器已停用，升级变化见[升级说明](/releases/upgrade.html)。
-:::
-
-::: warning 2.0 管理 API 切割
-插件服务通过框架 Token 认证后可直接调用管理 API。`system_management` 和 `allowed_actions` 已从服务配置与返回契约删除；`admin_base_url` 只用于管理员 SSO 和管理端入口，不参与 API 授权。插件应检查 `get_plugin_context().management_api_version === 1`，不得降级调用已删除的旧接口。
-:::
-
-### 选择 Android 或 Linux QQ
-
-v2.0.6 新增 [主动申请加好友](/api/send_friend_request.html)、[主动申请入群](/api/send_group_join_request.html)、[主动退群](/api/leave_group.html)、[修改群名](/api/set_group_name.html)、[设置精华消息](/api/set_group_essence.html)、[戳一戳](/api/send_poke.html)。旧 v2.0.5 不支持这些接口；各协议及实测范围以详情页为准。
-
-官方 SDK 推荐先创建协议作用域，再调用对应方法；QQ 宠物接口使用对象参数，具体见各接口详情：
+## 调用方式
 
 ```js
 const androidApi = api.forProtocol('android')
 const linuxApi = api.forProtocol('linuxqq')
-
-await linuxApi.send_group_msg(self_id, group_id, message)
+const info = await androidApi.get_login_info(self_id)
 ```
 
-直接发送账号 action 时，显式使用 `client_type: 'android' | 'linuxqq'`。SDK 无协议作用域的便捷方法默认选择 Android；不要依赖原始请求省略协议，新 action 会拒绝缺少协议的请求，同一 QQ 双协议在线也不会自动切换会话。
+账号接口使用 `self_id` 指定 QQ。`client_type` 取 `android` 或 `linuxqq`；SDK 未设置协议作用域时默认 Android。服务管理接口是否需要账号参数，以各接口参数表为准。
 
-Linux QQ 账号仍通过统一的 `/api/v1/accounts` 创建和管理。控制台登录时，由框架调用 `/api/v1/accounts/:self_id/sso/WTLoginQRCode` 创建二维码，再通过 `/api/v1/accounts/:self_id/sso/WTLoginQRCodeQuery` 查询状态；这两个接口属于登录后的管理端 REST 链路，不是插件 WebSocket action。免扫时框架内部使用同 QQ 在线 Android 账号的 `scan_qr`、`auth_qr` 授权这一个二维码，但调用方不能用它们代替 Linux 的创建、查询和最终登录步骤。
+### WebSocket 请求
 
-### 插件调用与事件
+```json
+{
+  "type": "action",
+  "id": "request-1",
+  "action": "get_login_info",
+  "params": { "self_id": 123456789, "client_type": "android" }
+}
+```
 
-`send_packet` 是普通 API，已认证的正向、反向及托管插件均可调用，无需白名单或专属 Key。服务 Token、参数和账号权限检查继续生效。新插件可从 [Node.js SDK](/development/nodejs-sdk.html) 接入。
+### 成功响应
 
-当前原生事件共 26 类，包含账号上线、离线、申请、消息与结构化通知。事件按账号实际节点产生，按插件订阅权限投递；WS 不绑定固定节点。正向 SDK v2.1.12 支持显式声明 `permissions.group_event`；表情回应请监听 `message_reaction_changed`。API 成功不等于事件已到达，断线不保证补发，详见[事件目录与可靠性](/events/)。
+```json
+{
+  "type": "action_result",
+  "id": "request-1",
+  "ok": true,
+  "data": { "user_id": 123456789, "nickname": "示例账号", "client_type": "android" }
+}
+```
+
+### 错误响应
+
+```json
+{
+  "type": "action_result",
+  "id": "request-1",
+  "ok": false,
+  "error": "账号未在线"
+}
+```
+
+各接口的返回说明对应 `data`。流式接口通过回调接收分片，详见 [download_file_stream](/api/download_file_stream.html)。连接与认证见 [SDK 接入](/development/nodejs-sdk.html)，推送格式见 [事件参考](/events/)。
 
 ## 系统信息
 
@@ -311,18 +321,3 @@ Linux QQ 账号仍通过统一的 `/api/v1/accounts` 创建和管理。控制台
 | API | 可用协议 | 说明 |
 | --- | --- | --- |
 | [获取 QQ 农场登录 code](/api/get_qq_farm_code.html) | Android 协议可用 | 获取一个新的 32 位 QQ 农场登录 code |
-
-## 通用约定
-
-- Bot 业务 API 的 `self_id` 是执行操作的在线 Bot QQ 号。
-- 服务管理 API 由已通过服务 Token 认证的插件调用；不再使用 `system_management` 或 `allowed_actions`。账号类 API 的 `self_id` 为目标 QQ，并通过 `client_type` 选择 Android 或 Linux。
-- 同一 QQ 可以同时存在 Android 与 Linux QQ 会话。推荐使用 `api.forProtocol('android' | 'linux')`；插件原始请求使用 `client_type` 选择协议。
-- 省略协议选择器时固定使用 Android。Linux 不支持的 action 会返回明确错误，不会转交同 QQ 的 Android 实例。
-- Android 密码、安全验证与 Linux QQ 原生扫码/票据登录是两套独立流程；不要混用登录 API、密码、协议 ID 或设备指纹。
-- 插件服务不再绑定节点。普通账号 action 通过 `self_id + client_type` 找到账号，并在账号自己的登录节点上执行。
-- `get_bot_list` 不接受 `all_nodes`；创建账号时必须给出账号的 `node_id`，编辑账号时可用 `node_id` 移动其登录节点。
-- Bot API 通常要求目标 Bot 在线。
-- SDK默认请求超时为 30 秒；红包与头像为 60 秒，语音、视频和批量等级任务为 5 分钟。
-- 同一插件连接上的 API 会并发执行，当前每连接最多同时执行 16 个 action；响应可能乱序，但 SDK 会按请求 ID 解析对应 Promise。
-- 连续 `await` 会由调用方形成串行；需要并发时先发起多个调用，再使用 `Promise.all`。
-- `file_path` 中的本地路径由萌卡NT后端读取。插件与后端不在同一主机时，应传后端可访问的 HTTP(S) 地址。

@@ -2,7 +2,7 @@
 
 注册滑块验证反向代理：由后端抓取并改写 TCaptcha.js，把脚本中的验证域名指向插件自身的反代地址。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.register_captcha_proxy(

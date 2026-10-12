@@ -2,11 +2,12 @@
 
 获取指定群聊中当前仍可领取的红包。
 
-## 调用
+## 调用方式
 
 ```js
 const packets = await api.get_group_red_packets(self_id, group_id)
 ```
+
 ## 参数
 
 | 参数 | 类型 | 必填 | 说明 |

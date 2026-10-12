@@ -6,7 +6,7 @@
 Android 与 Linux QQ 均使用萌卡 NT 原生好友消息链路执行。
 :::
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.send_friend_msg(self_id, user_id, message)

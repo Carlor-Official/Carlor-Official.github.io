@@ -2,7 +2,7 @@
 
 执行群聊打卡。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.group_sign(self_id, group_id)

@@ -2,7 +2,7 @@
 
 获取可用于创建或更新账号的设备指纹列表。
 
-## 调用
+## 调用方式
 
 ```js
 const profiles = await api.get_device_profile_list()

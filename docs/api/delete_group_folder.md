@@ -2,6 +2,8 @@
 
 删除指定群文件夹。
 
+## 调用方式
+
 ```js
 await api.delete_group_folder({
   self_id: 1060221,
@@ -10,11 +12,15 @@ await api.delete_group_folder({
 })
 ```
 
-| 字段 | 类型 | 必填 | 说明 |
+## 参数
+
+| 参数 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | `self_id` | number | 是 | 执行请求的在线 Bot QQ 号 |
 | `group_id` | number | 是 | 群号 |
 | `folder_id` | string | 是 | 文件夹 ID；也兼容 `folder`，不能传根目录 `/` |
+
+## 返回值
 
 成功时返回 `ret_code: 0`。
 

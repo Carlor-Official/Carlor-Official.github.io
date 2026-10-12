@@ -1,6 +1,6 @@
 # get_music_ark
 
-根据 QQ Android 9.2.70 实际接收的音乐分享结构，生成可由 `send_msg`、`send_group_msg` 或 `send_friend_msg` 发送的 Ark 音乐卡片。
+根据 QQ Android 实际接收的音乐分享结构，生成可由 `send_msg`、`send_group_msg` 或 `send_friend_msg` 发送的 Ark 音乐卡片。
 
 调用方提供歌曲名称、歌手、跳转地址、封面和音频地址；框架向音乐卡片签名服务提交这些公开展示字段，并校验返回值确实包含 `view=music` 和内容绑定 token。框架不会向签名服务发送 QQ 登录凭据、插件令牌或群聊信息。
 
@@ -8,7 +8,7 @@
 QQ 会校验音乐卡片内容与 token，不能通过复制旧卡片 token 或修改抓包 JSON 生成新歌曲。默认签名服务可由部署环境变量 `MENGKA_MUSIC_SIGN_URL` 替换；服务不可用时接口会明确失败，不会返回必然被 QQ 拦截的伪卡片。
 :::
 
-## 调用
+## 调用方式
 
 ```js
 const { data: musicArk } = await api.get_music_ark(self_id, {

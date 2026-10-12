@@ -1,6 +1,8 @@
 # upload_private_file
 
-将本地文件或可下载的 HTTP(S) 文件发送给指定 QQ 好友。框架使用 QQ Android 9.2.70 的离线文件通道，依次完成签名申请、Highway 上传和私聊文件消息下发。
+将本地文件或可下载的 HTTP(S) 文件发送给指定 QQ 好友。框架使用 QQ Android 的离线文件通道，依次完成签名申请、Highway 上传和私聊文件消息下发。
+
+## 调用方式
 
 ```js
 const result = await api.upload_private_file({
@@ -11,12 +13,16 @@ const result = await api.upload_private_file({
 })
 ```
 
-| 字段 | 类型 | 必填 | 说明 |
+## 参数
+
+| 参数 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | `self_id` | number | 是 | 执行请求的在线 Bot QQ 号 |
 | `user_id` | number | 是 | 接收文件的好友 QQ 号；也兼容 `target_uin` |
 | `file` | string | 是 | 框架所在机器的本地文件路径、`file://` 地址或 HTTP(S) 下载地址；也兼容 `file_path` |
 | `name` | string | 是 | 好友侧显示的文件名；也兼容 `file_name` |
+
+## 返回值
 
 成功时返回：
 

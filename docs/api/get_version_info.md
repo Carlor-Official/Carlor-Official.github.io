@@ -2,7 +2,7 @@
 
 获取萌卡 NT 框架版本、插件协议版本和当前账号协议。
 
-## 调用
+## 调用方式
 
 ```js
 const version = await api.get_version_info(self_id)

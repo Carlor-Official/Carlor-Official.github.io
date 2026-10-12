@@ -2,7 +2,7 @@
 
 萌卡 NT 通用消息发送接口，根据 `message_type` 路由到原生私聊或群聊发送链路。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.send_msg(self_id, message_type, target_id, message)

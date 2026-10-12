@@ -1,6 +1,8 @@
 # get_profile_like
 
-获取当前登录 QQ 的资料获赞记录。接口使用 QQ Android 9.2.70 的真实 `VisitorSvc.ReqGetVoterList` 请求，不读取网页缓存。
+获取当前登录 QQ 的资料获赞记录。接口使用 QQ Android 的真实 `VisitorSvc.ReqGetVoterList` 请求，不读取网页缓存。
+
+## 调用方式
 
 ```js
 const result = await api.get_profile_like({
@@ -11,13 +13,17 @@ const result = await api.get_profile_like({
 })
 ```
 
-| 字段 | 类型 | 必填 | 说明 |
+## 参数
+
+| 参数 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | `self_id` | number | 是 | 要查询的在线 Bot QQ 号 |
 | `user_id` | number | 否 | 查询目标；Android 9.2.70 当前只允许与 `self_id` 相同 |
 | `start` | number | 否 | 分页起点，默认 `0` |
 | `count` | number | 否 | 本次返回数量，默认 `10`，最大 `100` |
 | `cookie` | string | 否 | 服务端分页游标的 Base64 文本；首批不填写 |
+
+## 返回值
 
 成功时返回：
 

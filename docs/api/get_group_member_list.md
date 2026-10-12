@@ -2,7 +2,7 @@
 
 获取指定群的完整成员列表。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.get_group_member_list(self_id, group_id)

@@ -2,7 +2,7 @@
 
 将公开 HTTP(S) 地址的文件下载到萌卡 NT 框架目录下，并返回后端可直接读取的本地绝对路径。该接口是框架级接口，不需要 `self_id`。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.download_file({
@@ -18,7 +18,7 @@ const result = await api.download_file({
 | 参数 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | `url` | string | 是 | 仅支持公开的 HTTP(S) 地址 |
-| `thread_count` | number | 否 | 兼容字段；当前版本使用稳定的单连接下载 |
+| `thread_count` | number | 否 | 兼容字段；使用单连接下载 |
 | `headers` | object \| string[] | 否 | 下载请求头；数组格式为 `Header-Name: value` |
 
 ## 返回值

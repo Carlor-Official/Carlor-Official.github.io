@@ -1,8 +1,8 @@
 # send_private_msg
 
-按 `user_id` 向好友发送消息。该 action 已作为萌卡 NT 正式 API 注册，并复用 `send_friend_msg` 的原生发送链路。
+向指定好友发送消息。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.forProtocol('android').send_private_msg({ self_id, user_id, message })

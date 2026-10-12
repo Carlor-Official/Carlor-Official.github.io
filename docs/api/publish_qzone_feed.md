@@ -4,7 +4,7 @@
 
 发布一条文本 QQ 空间动态。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.publish_qzone_feed(

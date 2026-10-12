@@ -2,7 +2,7 @@
 
 撤回群聊消息。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.recall_group_msg(

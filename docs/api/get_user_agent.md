@@ -2,9 +2,9 @@
 
 获取当前 Bot 协议和设备指纹对应的 QQ Android WebView User-Agent。
 
-v2.0.5 起，此已有 action 纳入服务管理能力发现。插件通过服务令牌认证后调用；使用 `api.forProtocol('android')` 明确账号协议，不能把服务连接当成固定账号节点。
+使用 `api.forProtocol('android')` 或 `api.forProtocol('linuxqq')` 选择账号协议。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.get_user_agent(self_id)

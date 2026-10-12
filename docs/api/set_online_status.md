@@ -1,8 +1,8 @@
 # set_online_status
 
-设置当前在线 Bot 的基础在线状态或 QQ 扩展状态。底层使用 QQ Android 9.2.70 的真实状态请求，不依赖 PC QQ。
+设置当前账号的基础在线状态或扩展状态。
 
-## 调用
+## 调用方式
 
 ```js
 await api.set_online_status(self_id, status, ext_status, battery_status)

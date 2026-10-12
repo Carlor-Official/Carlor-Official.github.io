@@ -2,11 +2,15 @@
 
 创建一个只用于证明 QQ 归属的临时二维码。该链路使用临时 Linux 设备身份，不读写账号的持久设备指纹。
 
-## 调用
+## 调用方式
 
 ```js
 const recovery = await api.create_account_recovery_qr()
 ```
+
+## 参数
+
+无。
 
 ## 返回值
 

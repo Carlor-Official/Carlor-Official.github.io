@@ -2,7 +2,7 @@
 
 使用当前在线的安卓协议 Bot 创建普通 QQ 群。底层按 QQ 9.2.70 的创建群链路执行：先创建群聊，再按需邀请成员。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.create_group({

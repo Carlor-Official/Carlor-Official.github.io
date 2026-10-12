@@ -1,6 +1,8 @@
-# _send_group_notice
+# send_group_notice
 
-在指定 QQ 群发布公告。框架使用当前 QQ Android 9.2.70 登录态访问 QQ 官方群公告接口，不依赖 PC QQ 的本地服务。
+在指定群聊发布公告。
+
+## 调用方式
 
 ```js
 const result = await api._send_group_notice({
@@ -13,14 +15,14 @@ const result = await api._send_group_notice({
 
 ## 参数
 
-| 字段 | 类型 | 必填 | 说明 |
+| 参数 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | `self_id` | number | 是 | 当前在线 Bot QQ 号 |
 | `group_id` | number | 是 | 目标群号 |
 | `content` | string | 否 | 公告正文；与 `image` 不能同时为空 |
 | `image` | string | 否 | 可选图片，支持框架目录内文件、HTTP(S) URL、`base64://` 和 `file://` |
 
-## 返回
+## 返回值
 
 ```json
 {

@@ -2,7 +2,7 @@
 
 合成并直接向指定群聊发送 AI 语音。
 
-## 调用
+## 调用方式
 
 ```js
 await api.send_group_ai_record(self_id, group_id, character, text, 1)
@@ -19,3 +19,7 @@ await api.send_group_ai_record(self_id, group_id, character, text, 1)
 | `chat_type` | number | 否 | 会话类型，默认 `1` |
 
 参数规则与 [get_ai_record](/api/get_ai_record.html) 相同。成功表示 QQ 已接受发送流程，返回 `{ message_id: 0 }`。
+
+## 返回值
+
+成功返回 `{ message_id: 0 }`。

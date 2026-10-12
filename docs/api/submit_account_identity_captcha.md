@@ -2,7 +2,7 @@
 
 向指定账号的身份验证流程提交滑块结果。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.submit_account_identity_captcha(
@@ -23,3 +23,7 @@ const result = await api.submit_account_identity_captcha(
 | `protocol` | string | 否 | `android` 或 `linux`，默认 `android` |
 
 `ticket` 与 `randstr` 必须来自当前账号同一次验证会话。过期或跨会话复用会被拒绝。
+
+## 返回值
+
+返回当前身份验证响应对象。其中 `phoneNum` 为绑定手机号的脱敏值，`areaCode` 为区号；字段缺省时按当前验证流程处理。

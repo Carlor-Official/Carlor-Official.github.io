@@ -2,7 +2,7 @@
 
 通过共同群聊向群成员发送 QQ 原生临时会话消息。目标 QQ 不需要与发送账号建立好友关系。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.send_group_temp_msg(self_id, group_id, user_id, message)

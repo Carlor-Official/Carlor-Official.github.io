@@ -4,11 +4,15 @@
 
 当前 `management_api_version` 为 `1`，`available_actions` 共 54 项，包含共享等级任务管理接口和只读状态接口 `get_level_task_status`；`level_task_management_api_version` 仍为 `1`。插件必须检查所需 action 是否在列表中，不能仅因版本字段为 1 就假定全部能力存在。该列表是管理能力子集，不是全部公开 action。
 
-## 调用
+## 调用方式
 
 ```js
 const context = await api.get_plugin_context()
 ```
+
+## 参数
+
+无。
 
 ## 返回值
 
@@ -23,4 +27,4 @@ const context = await api.get_plugin_context()
 }
 ```
 
-`available_actions` 是当前版本的能力发现列表，不是逐项授权清单。当前服务通过 Token 认证后可直接调用这些管理 API。插件服务不再返回 `node_id`；账号 action 根据 `self_id + client_type` 使用账号自身登录节点。`system_management` 与 `allowed_actions` 已删除。
+`available_actions` 列出服务可调用的接口。账号接口通过 `self_id` 和 `client_type` 选择目标会话。

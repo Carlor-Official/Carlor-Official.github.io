@@ -1,6 +1,8 @@
-# .handle_quick_operation
+# handle_quick_operation
 
 根据萌卡 NT 上报的消息事件或请求事件执行一组快速操作。反向事件处理与 WebSocket 插件均可直接调用。
+
+## 调用方式
 
 ```js
 await api.call('.handle_quick_operation', {
@@ -11,14 +13,14 @@ await api.call('.handle_quick_operation', {
 
 ## 参数
 
-| 字段 | 类型 | 必填 | 说明 |
+| 参数 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | `context` | object | 是 | 框架上报的原始消息事件或请求事件 |
 | `operation` | object | 是 | 要执行的快速操作 |
 
 消息事件支持：
 
-| 字段 | 类型 | 默认值 | 说明 |
+| 参数 | 类型 | 默认值 | 说明 |
 | --- | --- | --- | --- |
 | `reply` | string / object / array | - | 回复文本、单个消息段或消息段数组 |
 | `at_sender` | boolean | `false` | 群聊回复时先 @发送者，匿名消息会忽略 |
@@ -30,11 +32,15 @@ await api.call('.handle_quick_operation', {
 
 请求事件支持：
 
-| 字段 | 类型 | 说明 |
+| 参数 | 类型 | 说明 |
 | --- | --- | --- |
 | `approve` | boolean | 同意或拒绝好友申请、加群申请或邀请 |
 | `remark` | string | 同意好友申请时设置备注 |
 | `reason` | string | 拒绝加群申请时填写理由 |
+
+## 返回值
+
+所有操作执行成功后返回 `null`。任一步失败时抛出包含 action 名称的错误。
 
 ## 示例
 
@@ -56,4 +62,3 @@ await api.call('.handle_quick_operation', {
 
 - 操作按照回复、撤回、踢出、禁言的顺序执行；任一步失败会返回明确的 action 名称和错误原因。
 - 匿名群消息不执行 `at_sender`、`kick` 或 `ban`。
-- 该 action 已在当前运行时正式注册。它会复用萌卡 NT 的消息发送、撤回、群管理和申请处理能力，不建立第二套协议实现。

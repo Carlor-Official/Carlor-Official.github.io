@@ -2,7 +2,7 @@
 
 评论一条好友 QQ 空间动态，支持纯文字、纯图片及图文同时发送。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.comment_qzone_feed(self_id, feed, content, images)

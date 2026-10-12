@@ -2,11 +2,15 @@
 
 读取框架级账号运行设置。
 
-## 调用
+## 调用方式
 
 ```js
 const settings = await api.get_account_settings()
 ```
+
+## 参数
+
+无。
 
 ## 返回值
 

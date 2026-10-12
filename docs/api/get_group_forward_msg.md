@@ -2,7 +2,7 @@
 
 获取群聊合并转发消息的完整内容。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.get_group_forward_msg(

@@ -2,7 +2,7 @@
 
 同意入群申请。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.approve_group_apply(

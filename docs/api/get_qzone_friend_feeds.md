@@ -2,7 +2,7 @@
 
 获取好友空间首包中的最新动态。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.get_qzone_friend_feeds(self_id)

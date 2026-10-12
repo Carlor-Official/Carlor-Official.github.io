@@ -2,11 +2,11 @@
 
 向指定 QQ 主动提交好友申请，不是同意已收到的申请。
 
-::: warning v2.0.6 新增
-本接口在 v2.0.5 基线上新增，已发布的 v2.0.5 不提供此 action。测试环境已验证 Android 与 Linux 发起申请、跨节点双 WS 事件投递、真实 flag 同意及双方好友列表回读。Linux 使用当前会话的原生 UID 请求，不借用 Android 会话。当前 Linux 仍需框架已解析目标 UID；完全陌生且没有 UID 缓存的账号尚未完成验收，解析失败会明确报错。请勿自动重试或批量发送申请。
-:::
+Linux 账号需要已解析目标用户的 UID；无法解析时返回错误。
 
-## 调用
+使用条件：账号在线且 QQ 等级至少 16 级。等级由服务端账号状态核验；未知或不足时返回错误。
+
+## 调用方式
 
 ```js
 const result = await api.forProtocol('android').send_friend_request(
@@ -44,7 +44,7 @@ const result = await api.forProtocol('android').send_friend_request(
 
 框架负责账号路由、签名和登录票据。调用方不传专属 Key、原生数据包或节点绑定字段。调用前需要已认证的服务连接及指定协议在线账号。
 
-## 返回语义
+## 返回值
 
 | 字段 | 说明 |
 | --- | --- |
@@ -52,7 +52,7 @@ const result = await api.forProtocol('android').send_friend_request(
 | `submitted` | 仅表示原生接口是否确认提交；不表示已经成为好友或对方已收到事件 |
 | `user_id` | 目标 QQ |
 | `policy` | 原生目标好友验证策略值 |
-| `result` | 原生业务结果码，不伪造成功 |
+| `result` | 业务结果码 |
 | `error_code` | 原生业务错误码 |
 | `message` | 原生错误说明（可能为空） |
 
@@ -66,7 +66,7 @@ const result = await api.forProtocol('android').send_friend_request(
 
 当前支持原生无需验证（策略 0）及发送申请说明（策略 1）。问题答案验证或未知策略返回 `verification_required`，不会把申请说明当作问题答案提交。策略 0 的单向添加不保证接收方也建立关系，仍须回读确认。
 
-策略 0 不产生待审批申请，不能等待 `friend_request_received` 或使用它不存在的 `flag`。原生 `friend_added` 按实际发生关系变化的账号分别投递；只有发起方新增关系时，不应要求接收方也收到新增事件。Android 和 Linux 发起的单向添加均已完成两个测试 QQ、双协议、跨节点和双 WS 实测；这不代表无缓存陌生账号、全部验证策略或全部事件已验收。
+策略 0 不产生待审批申请，不能等待 `friend_request_received` 或使用它不存在的 `flag`。原生 `friend_added` 按实际发生关系变化的账号分别投递；只有发起方新增关系时，不应要求接收方也收到新增事件。
 
 ## 建议搭配
 

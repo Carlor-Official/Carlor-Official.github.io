@@ -2,7 +2,7 @@
 
 上传好友聊天图片，并返回可直接传给 `send_friend_msg` 的图片消息段。
 
-## 调用
+## 调用方式
 
 ```js
 const image = await api.upload_friend_image(

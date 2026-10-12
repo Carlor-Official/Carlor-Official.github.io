@@ -2,9 +2,9 @@
 
 获取指定域名的 PsKey。
 
-> v2.0.6补充 Linux 原生域名凭据获取。请显式选择账号协议；不会跨协议借用 Android 登录票据。返回的 `pskey` 是敏感凭据，不应写入日志、前端页面或公开报告。精华查询等已有框架 API 会在内部处理凭据，插件无需自行获取。
+使用 `client_type` 选择目标账号协议。返回凭据仅适用于该账号及指定域名。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.get_pskey(self_id, domain)

@@ -4,7 +4,7 @@
 
 点赞一条好友空间动态。
 
-## 调用
+## 调用方式
 
 ```js
 api.like_qzone_feed(self_id, feed)

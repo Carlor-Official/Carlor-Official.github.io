@@ -2,7 +2,7 @@
 
 创建一个离线 Bot 账号，并指定该账号使用的登录节点。
 
-## 调用
+## 调用方式
 
 ```js
 const account = await api.add_account({
@@ -17,7 +17,7 @@ const account = await api.add_account({
 
 ## 参数
 
-只接受对象参数，不再兼容旧的位置参数。
+SDK 方法接受一个参数对象。
 
 | 参数 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |

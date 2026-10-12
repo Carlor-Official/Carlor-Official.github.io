@@ -2,7 +2,7 @@
 
 根据框架当前进程已经接收或观察到的群聊、私聊事件生成近期会话，不读取手机 QQ 数据库，也不向 QQ 请求会话列表。
 
-## 调用
+## 调用方式
 
 ```js
 await api.get_recent_contact(self_id, count)
@@ -15,7 +15,9 @@ await api.get_recent_contact(self_id, count)
 | `self_id` | number | 是 | 在线 Bot QQ 号 |
 | `count` | number | 否 | 返回会话数量，默认 10，范围 1 到 100 |
 
-返回结果按最后消息从新到旧排列，群聊和私聊分别去重。`lastestMsg` 保持历史插件使用的字段拼写。
+## 返回值
+
+返回结果按最后消息从新到旧排列，群聊和私聊分别去重。最后一条消息的字段名为 `lastestMsg`。
 
 ```json
 [

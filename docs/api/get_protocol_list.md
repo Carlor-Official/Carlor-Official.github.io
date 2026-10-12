@@ -2,7 +2,7 @@
 
 获取可用于创建或更新账号的协议列表。
 
-## 调用
+## 调用方式
 
 ```js
 const protocols = await api.get_protocol_list()

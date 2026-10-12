@@ -2,7 +2,7 @@
 
 向指定群聊发送 QQ 群红包，支持拼手气、普通、专属、语音和口令五种类型。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.send_group_red_packet(
@@ -42,8 +42,6 @@ const result = await api.send_group_red_packet(
 | `exclusive` | 专属红包，需同时传入 `target_uins` |
 | `voice` | 语音红包，`wishing` 为语音口令 |
 | `command` | 口令红包，`wishing` 为文字口令 |
-
-## 原始 action 参数
 
 ```json
 {

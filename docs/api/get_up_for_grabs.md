@@ -2,7 +2,7 @@
 
 获取指定群聊中当前仍可领取的红包，与 `get_group_red_packets` 返回相同结果。
 
-## 调用
+## 调用方式
 
 ```js
 const packets = await api.get_up_for_grabs(self_id, group_id)

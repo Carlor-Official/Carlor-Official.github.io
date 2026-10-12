@@ -2,7 +2,7 @@
 
 获取 Bot 的完整群聊列表。萌卡NT会自动完成分页。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.get_group_list(self_id)

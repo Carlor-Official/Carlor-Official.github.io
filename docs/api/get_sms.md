@@ -11,7 +11,7 @@
 
 可用类型由 [`get_security_verify_methods`](/api/get_security_verify_methods.html) 的 `methods.verify_list` 决定，不要写死。
 
-## 调用
+## 调用方式
 
 ```js
 const self_id = 123456789 // 正在登录的 Bot QQ 号

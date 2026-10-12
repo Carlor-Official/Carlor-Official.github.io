@@ -2,7 +2,7 @@
 
 拒绝入群申请。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.reject_group_apply(

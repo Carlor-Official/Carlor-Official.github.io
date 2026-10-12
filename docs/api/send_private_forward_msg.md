@@ -2,7 +2,7 @@
 
 创建文本合并转发消息并发送给指定好友，使用当前账号的原生发送链路。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.forProtocol('android').send_private_forward_msg({
@@ -11,6 +11,7 @@ const result = await api.forProtocol('android').send_private_forward_msg({
   messages,
 })
 ```
+
 ## 参数
 
 | 参数 | 类型 | 必填 | 说明 |
@@ -35,7 +36,7 @@ const result = await api.forProtocol('android').send_private_forward_msg({
 ```
 
 `content` 也可以直接填写字符串。节点使用 `data.id` 时，会引用框架
-近期缓存的 `message_id`。当前版本生成合并转发正文时支持 `text`
+近期缓存的 `message_id`。合并转发正文支持 `text`
 消息段，其余消息段会计入返回值中的 `discarded_segments`。
 
 ## 返回值

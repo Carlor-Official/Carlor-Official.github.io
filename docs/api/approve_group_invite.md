@@ -2,7 +2,7 @@
 
 同意好友发来的群聊邀请。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.approve_group_invite(self_id, group_id, msgseq)
@@ -17,7 +17,7 @@ const result = await api.approve_group_invite(self_id, group_id, msgseq)
 | `msgseq` | number | 是 | 邀请通知的请求序号 |
 
 `group_id` 和 `msgseq` 从 `get_group_system_notifications` 返回的同一条邀请通知中取得。
-框架会按 QQ Android 9.2.70 返回的实际通知类型处理，不再把邀请类型写死。
+`flag` 使用邀请事件返回的值。
 
 ## 返回值
 

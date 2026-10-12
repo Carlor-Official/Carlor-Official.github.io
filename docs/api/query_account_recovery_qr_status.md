@@ -2,7 +2,7 @@
 
 查询账号归属验证二维码状态。扫码并在手机 QQ 确认后，只返回已验证的 QQ 号。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.query_account_recovery_qr_status(recovery.recovery_token)

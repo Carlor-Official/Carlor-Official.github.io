@@ -2,7 +2,7 @@
 
 批量将指定成员移出群聊。该接口兼容 NapCat 同名 action，在 Android 9.2.70 协议下按成员顺序调用已经验证的单人移出群聊链路。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.set_group_kick_members(

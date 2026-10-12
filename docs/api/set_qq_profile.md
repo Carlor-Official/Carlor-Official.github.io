@@ -1,8 +1,8 @@
 # set_qq_profile
 
-设置当前 QQ Bot 的昵称、性别和个性签名。昵称与性别使用 QQ Android 9.2.70 的资料编辑协议；个性签名使用内容审核与富签名保存链路，并支持重复提交同一个值。
+设置当前 QQ Bot 的昵称、性别和个性签名。昵称与性别使用 QQ Android 的资料编辑协议；个性签名使用内容审核与富签名保存链路，并支持重复提交同一个值。
 
-## 调用
+## 调用方式
 
 ```js
 const result = await api.set_qq_profile(self_id, nickname, personal_note, sex)

@@ -2,7 +2,7 @@
 
 创建或更新当前插件服务对指定 QQ 与协议的授权租约。
 
-## 调用
+## 调用方式
 
 ```js
 const lease = await api.set_account_access({
@@ -14,6 +14,21 @@ const lease = await api.set_account_access({
   metadata: { source: 'order', order_id: 'M202609030001' }
 })
 ```
+
+## 参数
+
+| 参数 | 类型 | 必填 | 说明 |
+| --- | --- | --- | --- |
+| `self_id` | number | 是 | 目标 QQ 账号 |
+| `client_type` | string | 否 | `android` 或 `linuxqq`，默认 `android` |
+| `owner_id` | string | 否 | 插件侧用户标识 |
+| `enabled` | boolean | 否 | 是否启用，默认 true |
+| `expires_at` | string | 否 | 到期时间；省略时无期限 |
+| `metadata` | object | 否 | 业务附加信息 |
+
+## 返回值
+
+返回保存后的授权租约，字段与 [get_account_access_list](/api/get_account_access_list.html#返回值) 的列表项一致。
 
 ## 规则
 

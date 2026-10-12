@@ -2,6 +2,8 @@
 
 将本地文件或可下载的 HTTP(S) 文件真实上传到群文件。上传完成后，文件会直接出现在 QQ 群文件列表中。
 
+## 调用方式
+
 ```js
 const result = await api.upload_group_file({
   self_id: 1060221,
@@ -12,7 +14,9 @@ const result = await api.upload_group_file({
 })
 ```
 
-| 字段 | 类型 | 必填 | 说明 |
+## 参数
+
+| 参数 | 类型 | 必填 | 说明 |
 | --- | --- | --- | --- |
 | `self_id` | number | 是 | 执行请求的在线 Bot QQ 号 |
 | `group_id` | number | 是 | 群号 |
@@ -20,6 +24,8 @@ const result = await api.upload_group_file({
 | `name` | string | 是 | 上传后显示的文件名；也兼容 `file_name` |
 | `folder` | string | 否 | 目标文件夹 ID，默认 `/`；也兼容 `folder_id`、`parent_folder_id` |
 | `upload_file` | boolean | 否 | 是否执行真实上传，默认 `true`；传 `false` 会直接返回错误 |
+
+## 返回值
 
 成功时返回 `file_id`、`file_name`、`busid`、`file_size` 和 `parent_folder_id`。这些字段可直接用于后续查询或删除。
 
