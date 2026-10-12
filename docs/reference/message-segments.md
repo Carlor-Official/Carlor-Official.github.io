@@ -176,7 +176,7 @@ const video = await api.upload_group_video(self_id, group_id, file_path)
 await api.send_group_msg(self_id, group_id, [video])
 ```
 
-输入文件必须为 MP4 格式。后端使用 FFmpeg 镜像读取视频信息并生成封面，返回值可直接作为 `video` 消息段使用。
+输入文件必须为 MP4 格式。后端使用原生媒体处理读取视频信息并生成封面，无需 FFmpeg 或 Docker，返回值可直接作为 `video` 消息段使用。
 
 ## 合并转发
 

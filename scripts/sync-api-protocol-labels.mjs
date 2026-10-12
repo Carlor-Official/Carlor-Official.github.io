@@ -5,6 +5,8 @@ import { guidanceForAction } from '../shared/api-guidance.mjs'
 
 const indexPath = path.resolve(import.meta.dirname, '..', 'docs', 'api', 'index.md')
 const source = await fs.readFile(indexPath, 'utf8')
+const actions = JSON.parse(await fs.readFile(new URL('../shared/api-actions.json', import.meta.url), 'utf8')).actions
+const expectedCount = actions.length
 const newline = source.includes('\r\n') ? '\r\n' : '\n'
 const lines = source.split(/\r?\n/)
 const apiRow = /^(\|\s*\[[^\]]+]\(\/api\/([A-Za-z0-9_]+)(?:\.html)?\)\s*\|)\s*(.*)\|\s*$/
@@ -37,7 +39,7 @@ for (let index = 0; index < lines.length; index += 1) {
   }
 }
 
-if (count !== 234) throw new Error(`API 总览应包含 234 个接口，实际处理 ${count} 个`)
+if (count !== expectedCount) throw new Error(`API 总览应包含 ${expectedCount} 个接口，实际处理 ${count} 个`)
 
 const output = lines.join(newline)
 if (process.argv.includes('--check')) {

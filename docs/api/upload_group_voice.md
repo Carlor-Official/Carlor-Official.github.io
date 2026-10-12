@@ -16,7 +16,7 @@ const voice = await api.upload_group_voice(self_id, group_id, file_path)
 | `group_id` | number | 是 | 目标群聊 ID |
 | `file_path` | string | 是 | 后端本地路径、`file://` 或后端可访问的 HTTP(S) 音频地址 |
 
-后端通过 FFmpeg 解码常见音频格式，转换为单声道 24kHz PCM 后编码为 Silk，并生成语音波形。需要先安装并运行 FFmpeg 镜像。
+后端使用原生 Go MP3 解码器，将音频转换为单声道 24kHz PCM，再按 20ms 分包编码为 Silk，并以同一份样本生成波形、时长和上传摘要。无需 FFmpeg、Docker 或外部解码进程；当前上传音频输入支持 MP3，未实现的格式明确返回错误。
 
 ## 返回值
 

@@ -28,6 +28,8 @@ if (bot && bot.status !== 0) {
 
 ## 密码登录
 
+v2.5.9管理端 Linux 提供免扫、扫码、账号密码三种入口。Linux 密码登录使用原生 NTLogin，支持新设备和异常设备验证；插件 `login_account` 的 Linux 二维码入口仍沿用原契约。
+
 添加账号不自动登录。用户明确发起登录后，先检查缓存并尝试缓存登录；仅在缓存明确失效时转入对应协议的普通登录。网络超时不是缓存失效，不自动反复提交登录或安全验证。
 
 ```js
@@ -48,6 +50,7 @@ const result = await api.login_account(self_id)
 | `140022008` | 需要滑块验证 | 展示 `slider_url`，完成后调用 `submit_slider` |
 | `140022007` | 需要身份验证 | 使用 `identity_url` 及账号协议、设备指纹完成验证 |
 | `140022010` | 需要安全验证 | 查询<a class="security-method-link" href="/api/get_security_verify_methods">安全验证方式</a>，按可用方式继续 |
+| `140022011` | Linux 异常设备验证 | 管理端选择服务器提供的验证方式继续 |
 | `140022013` | 账号或密码错误 | 检查账号配置 |
 
 `security_url` 仅在响应实际包含地址时出现，不应假定该字段始终存在。
@@ -207,4 +210,4 @@ const result = await api.cache_login(self_id)
 
 扫码与免扫使用同一条 Linux `3.2.32` 登录链路：Linux 会话先创建二维码并保存本次会话凭据；人工扫码由手机 QQ 完成，免扫则由同 QQ 的在线 Android 框架账号依次调用 `scan_qr` 和 `auth_qr`。两种方式最终都由原 Linux 会话查询并完成登录，不会切换到 Android 登录包，也不会创建第二条二维码会话。授权接口以 Android 账号调用，不能把 Linux 的 `client_type` 传给 Android 授权接口。不要并发发起多次登录或在失败后无限自动重放。
 
-等级任务的“电脑QQ在线”已由框架封装这条流程，插件通过 `execute_level_task_selection` 执行即可，不需要另外实现登录循环。登录建立与 QQ 累计在线时长是两个阶段。
+v2.5.9等级执行器不再提供“电脑QQ在线”自动任务。需要 Linux 在线时请从账号管理发起登录；登录建立与 QQ 累计在线时长是两个阶段。

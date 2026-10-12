@@ -16,7 +16,7 @@ const video = await api.upload_group_video(self_id, group_id, file_path)
 | `group_id` | number | 是 | 目标群聊 ID |
 | `file_path` | string | 是 | MP4 的后端本地路径、`file://` 或后端可访问的 HTTP(S) 地址 |
 
-后端通过已安装并运行的 FFmpeg 镜像读取视频尺寸与时长，并自动提取 PNG 封面。
+后端使用原生 Go 媒体处理读取 MP4 尺寸和时长，并提取首帧封面，无需 FFmpeg 或 Docker。容器格式或编码不受支持时返回明确错误。
 
 ## 返回值
 

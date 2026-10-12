@@ -1,4 +1,5 @@
 const linuxNativeActions = new Set([
+  'get_skey', 'get_clientkey',
   'send_friend_request', 'leave_group', 'set_group_name', 'set_group_essence', 'send_poke',
   'set_friend_add_request', 'get_pskey', 'get_essence_msg_list',
   'like_summary_card', 'nc_get_user_status', 'get_group_root_files', 'get_group_files_by_folder',
@@ -35,7 +36,7 @@ const systemManagementActions = new Set([
   'get_sms', 'check_sms', 'create_login_qr', 'query_login_qr_status', 'get_level_tasks',
   'execute_level_tasks', 'get_summary_card', 'get_user_agent',
   'get_level_task_accounts', 'get_level_task_account', 'get_level_task_panel',
-  'get_level_task_settings', 'update_level_task_settings', 'execute_level_task_selection',
+  'get_level_task_settings', 'update_level_task_settings', 'execute_level_task_selection', 'get_level_task_status',
 ])
 
 const systemManagementIndependentActions = new Set([
@@ -50,11 +51,11 @@ const bothAccountActions = new Set(['get_bot_list', 'get_bot_info'])
 const linuxOnlyActions = new Set()
 const androidOnlyActions = new Set([
   'scan_qr', 'auth_qr',
-  'submit_slider', 'get_security_verify_methods', 'get_sms', 'check_sms',
+
   'submit_account_identity_captcha', 'submit_account_identity_phone', 'confirm_account_identity_sms',
-  'retry_account_identity_verify', 'open_account_security_access', 'retry_account_security_verify',
-  'get_level_tasks', 'execute_level_tasks', 'get_level_task_account', 'get_level_task_panel',
-  'get_level_task_settings', 'update_level_task_settings', 'execute_level_task_selection',
+  'retry_account_identity_verify',
+
+
   'get_doubt_friends_add_request', 'set_doubt_friends_add_request', 'send_group_join_request',
   'fetch_emoji_like', 'get_group_at_all_remain', 'get_group_file_system_info',
   'get_profile_like', 'get_unidirectional_friend_list',

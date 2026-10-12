@@ -6,8 +6,8 @@
 本文档沿用萌卡 NT 官方 API 参考。请使用与目标框架 Release 相匹配的 SDK；管理能力通过 `get_plugin_context().available_actions` 查询，不要仅凭官网列表假设目标实例已支持全部功能。QQ 宠物接口使用对象参数；已删除的旧服务字段和旧 action 不恢复兼容。
 :::
 
-::: tip v2.4.4 协议基线
-Linux QQ 仅保留 `3.2.32`。扫码登录、同 QQ Android 免扫授权和等级任务“电脑QQ在线”共用同一 Linux 二维码会话；`3.2.33` 及其算法路由已移除。业务 API 的公开参数不变，框架内部按实际协议字段组包。“听歌领金币兑换加速”以兑换接口业务结果为准，不再由 QQ 音乐余额查询结果提前拦截。
+::: tip v2.5.9 协议基线
+Android 仅保留 QQ 9.1.70，Linux 使用 3.2.32。Linux 管理端支持免扫、扫码和账号密码登录；等级任务与登录凭证接口按 `client_type` 区分协议。部分旧任务执行器已停用，升级变化见[升级说明](/releases/upgrade.html)。
 :::
 
 ::: warning 2.0 管理 API 切割
@@ -132,9 +132,9 @@ Linux QQ 账号仍通过统一的 `/api/v1/accounts` 创建和管理。控制台
 | [取消好友动态点赞](/api/unlike_qzone_feed.html) | Android 协议可用 | 取消指定动态的点赞 |
 | [获取 QQ 名片](/api/get_summary_card.html) | Android / Linux 双协议可用 | 获取自己或指定用户的 QQ 名片 |
 | [点赞 QQ 名片](/api/like_summary_card.html) | Android / Linux 双协议可用 | 点赞指定用户的 QQ 名片 |
-| [获取 skey](/api/get_skey.html) | Android 协议可用 | 获取当前 Bot 的 skey |
+| [获取 skey](/api/get_skey.html) | Android / Linux 双协议可用 | 获取当前 Bot 的 skey |
 | [获取 User-Agent](/api/get_user_agent.html) | Android / Linux 双协议可用 | 获取当前 Bot 协议和设备指纹对应的 User-Agent |
-| [获取 clientkey](/api/get_clientkey.html) | Android 协议可用 | 获取十六进制 clientkey |
+| [获取 clientkey](/api/get_clientkey.html) | Android / Linux 双协议可用 | 获取十六进制 clientkey |
 | [获取 PsKey](/api/get_pskey.html) | Android / Linux 双协议可用 | 获取指定域名的 PsKey |
 | [获取媒体 RKey](/api/get_rkey.html) | Android 协议可用 | 读取框架后台已维护的媒体 RKey 缓存 |
 | [获取媒体 RKey（通用 action）](/api/nc_get_rkey.html) | Android 协议可用 | 与 `get_rkey` 使用同一套萌卡原生缓存 |
@@ -220,22 +220,23 @@ Linux QQ 账号仍通过统一的 `/api/v1/accounts` 创建和管理。控制台
 | [密码登录](/api/login_account.html) | Android / Linux 双协议可用 | 发起密码登录 |
 | [检查登录缓存](/api/check_cache.html) | Android / Linux 双协议可用 | 检查本地登录缓存 |
 | [缓存登录](/api/cache_login.html) | Android / Linux 双协议可用 | 使用本地缓存登录 |
-| [提交滑块验证](/api/submit_slider.html) | Android 协议可用 | 提交滑块结果 |
-| [查询安全验证方式](/api/get_security_verify_methods.html) | Android 协议可用 | 查询安全验证原因与可用方式 |
+| [提交滑块验证](/api/submit_slider.html) | Android / Linux 双协议可用 | 提交滑块结果 |
+| [查询安全验证方式](/api/get_security_verify_methods.html) | Android / Linux 双协议可用 | 查询安全验证原因与可用方式 |
 | [创建登录二维码](/api/create_login_qr.html) | Android / Linux 双协议可用 | 创建安全验证登录二维码 |
 | [查询登录二维码状态](/api/query_login_qr_status.html) | Android / Linux 双协议可用 | 查询扫码状态并在确认后继续登录 |
-| [获取短信验证码](/api/get_sms.html) | Android 协议可用 | 下发安全验证短信 |
-| [提交短信验证码](/api/check_sms.html) | Android 协议可用 | 提交短信验证码并继续登录 |
+| [获取短信验证码](/api/get_sms.html) | Android / Linux 双协议可用 | 下发安全验证短信 |
+| [提交短信验证码](/api/check_sms.html) | Android / Linux 双协议可用 | 提交短信验证码并继续登录 |
 | [Android 扫描登录二维码](/api/scan_qr.html) | Android 协议可用 | 使用在线 Android Bot 扫描登录二维码 |
 | [Android 授权登录二维码](/api/auth_qr.html) | Android 协议可用 | 使用在线 Android Bot 确认二维码授权 |
-| [获取等级加速任务](/api/get_level_tasks.html) | Android 协议可用 | 获取 QQ 等级加速面板 |
-| [执行等级加速任务](/api/execute_level_tasks.html) | Android 协议可用 | 执行指定的等级加速任务 |
+| [获取等级加速任务](/api/get_level_tasks.html) | Android / Linux 双协议可用 | 获取 QQ 等级加速面板 |
+| [执行等级加速任务](/api/execute_level_tasks.html) | Android / Linux 双协议可用 | 执行指定的等级加速任务 |
 | [获取等级加速账号列表](/api/get_level_task_accounts.html) | Android / Linux 双协议可用 | 获取框架共享等级任务账号及协议支持情况 |
-| [获取等级加速账号详情](/api/get_level_task_account.html) | Android 协议可用 | 读取单个账号的共享任务状态 |
-| [获取等级加速面板](/api/get_level_task_panel.html) | Android 协议可用 | 刷新或读取共享任务面板 |
-| [读取等级任务计划](/api/get_level_task_settings.html) | Android 协议可用 | 读取框架统一调度配置 |
-| [保存等级任务计划](/api/update_level_task_settings.html) | Android 协议可用 | 保存计划，不立即执行 |
-| [执行选定等级任务](/api/execute_level_task_selection.html) | Android 协议可用 | 复用框架执行过滤、缓存与并发控制 |
+| [获取等级加速账号详情](/api/get_level_task_account.html) | Android / Linux 双协议可用 | 读取单个账号的共享任务状态 |
+| [获取等级任务状态](/api/get_level_task_status.html) | Android / Linux 双协议可用 | 只读获取等级任务状态 |
+| [获取等级加速面板](/api/get_level_task_panel.html) | Android / Linux 双协议可用 | 刷新或读取共享任务面板 |
+| [读取等级任务计划](/api/get_level_task_settings.html) | Android / Linux 双协议可用 | 读取框架统一调度配置 |
+| [保存等级任务计划](/api/update_level_task_settings.html) | Android / Linux 双协议可用 | 保存计划，不立即执行 |
+| [执行选定等级任务](/api/execute_level_task_selection.html) | Android / Linux 双协议可用 | 复用框架执行过滤、缓存与并发控制 |
 | [注册滑块验证反代](/api/register_captcha_proxy.html) | Android / Linux 双协议可用 | 注册滑块反代并返回改写后的验证脚本 |
 | [滑块验证反代请求](/api/captcha_proxy.html) | Android / Linux 双协议可用 | 反代转发滑块请求到腾讯验证服务 |
 
@@ -263,8 +264,8 @@ Linux QQ 账号仍通过统一的 `/api/v1/accounts` 创建和管理。控制台
 | [提交身份手机号](/api/submit_account_identity_phone.html) | Android 协议可用 | 提交身份验证手机号并请求短信 |
 | [确认身份短信](/api/confirm_account_identity_sms.html) | Android 协议可用 | 确认身份验证短信已完成 |
 | [重试身份验证登录](/api/retry_account_identity_verify.html) | Android 协议可用 | 使用验证结果重试账号登录 |
-| [调用账号安全验证](/api/open_account_security_access.html) | Android 协议可用 | 调用指定 SsoSecureAccess 验证类型 |
-| [重试安全验证登录](/api/retry_account_security_verify.html) | Android 协议可用 | 使用安全验证结果重试账号登录 |
+| [调用账号安全验证](/api/open_account_security_access.html) | Android / Linux 双协议可用 | 调用指定 SsoSecureAccess 验证类型 |
+| [重试安全验证登录](/api/retry_account_security_verify.html) | Android / Linux 双协议可用 | 使用安全验证结果重试账号登录 |
 | [获取账号授权租约](/api/get_account_access_list.html) | Android / Linux 双协议可用 | 获取当前服务创建的账号授权租约 |
 | [设置账号授权租约](/api/set_account_access.html) | Android / Linux 双协议可用 | 为指定 QQ 与协议创建或更新授权租约 |
 | [清除账号授权租约](/api/clear_account_access.html) | Android / Linux 双协议可用 | 清除当前服务对指定 QQ 与协议的租约 |

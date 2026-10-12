@@ -2,6 +2,10 @@
 
 官方 Node.js SDK 已封装本页协议。其他语言可以按照以下 JSON 帧实现 WebSocket 客户端或服务端。
 
+v2.5.9支持 Android 9.1.70 与 Linux 3.2.32。`params.client_type` 为 `android` 或 `linuxqq`；省略时仍选择 Android。同 QQ 的不同协议账号保持隔离。
+
+`get_skey` 和 `get_clientkey` 使用同名 action，按该参数返回对应协议凭证，响应分别保持 `{ skey }` 与 `{ clientkey }`。
+
 ## API 请求
 
 ```json

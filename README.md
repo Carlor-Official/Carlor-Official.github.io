@@ -1,6 +1,6 @@
 # 萌卡 NT 2.0 官网
 
-萌卡 NT 的新一代官网与开发文档，基于 VitePress 构建并由 Cloudflare Pages 发布。
+萌卡 NT 的新一代官网与开发文档，基于 VitePress 构建并由 EdgeOne Pages 发布。
 
 ## 本地开发
 
@@ -15,7 +15,7 @@ npm run dev
 npm run build
 ```
 
-生产环境由 Cloudflare Pages 连接本仓库的 `main` 分支自动发布：
+生产环境由 EdgeOne Pages 连接本仓库的 `main` 分支自动发布：
 
 - 构建命令：`npm run build`
 - 输出目录：`docs/.vitepress/dist`

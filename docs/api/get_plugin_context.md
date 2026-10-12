@@ -2,7 +2,7 @@
 
 读取当前插件服务的管理 API 上下文，适合在管理端启动时确认连接目标与契约版本。
 
-v2.1.0 的 `management_api_version` 为 `1`，`available_actions` 共 53 项，包含从 v2.0.9 引入的六个共享等级任务管理接口；`level_task_management_api_version` 为 `1`。插件必须检查所需 action 是否在列表中，不能仅因版本字段为 1 就假定全部能力存在。该列表是管理能力子集，不是全部 233 个公开 action。
+当前 `management_api_version` 为 `1`，`available_actions` 共 54 项，包含共享等级任务管理接口和只读状态接口 `get_level_task_status`；`level_task_management_api_version` 仍为 `1`。插件必须检查所需 action 是否在列表中，不能仅因版本字段为 1 就假定全部能力存在。该列表是管理能力子集，不是全部公开 action。
 
 ## 调用
 
