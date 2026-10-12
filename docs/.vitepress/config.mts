@@ -1,5 +1,6 @@
 import { defineConfig } from 'vitepress'
 import { buildApiSidebar } from './api-sidebar.mjs'
+import { splitApiSearchSections, tokenizeSearch, searchOptions } from './api-search.mjs'
 
 const mainSidebar = [
   { text: '快速开始', collapsed: false, items: [
@@ -94,6 +95,11 @@ export default defineConfig({
     search: {
       provider: 'local',
       options: {
+        miniSearch: {
+          _splitIntoSections: splitApiSearchSections,
+          options: { tokenize: tokenizeSearch },
+          searchOptions,
+        },
         translations: {
           button: { buttonText: '搜索文档', buttonAriaLabel: '搜索文档' },
           modal: {

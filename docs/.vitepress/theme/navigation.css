@@ -60,6 +60,22 @@
   outline: 2px solid var(--vp-c-brand-1);
   outline-offset: 3px;
 }
+.VPLocalSearchBox .titles .title.main {
+  order: -1;
+  flex-basis: 100%;
+  min-width: 0;
+  font-size: 16px;
+  line-height: 1.6;
+  overflow-wrap: anywhere;
+}
+.VPLocalSearchBox .titles .title:not(.main) {
+  font-size: 12px;
+  color: var(--vp-c-text-2);
+}
+.VPLocalSearchBox .titles .title-icon,
+.VPLocalSearchBox .titles .title:nth-last-child(2) .local-search-icon {
+  display: none;
+}
 @media (prefers-reduced-motion: reduce) {
   .VPNav *, .VPSidebar *, .VPLocalNav * { transition: none !important; }
 }

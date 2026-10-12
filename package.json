@@ -5,7 +5,7 @@
   "type": "module",
   "scripts": {
     "dev": "vitepress dev docs",
-    "build": "vitepress build docs",
+    "build": "vitepress build docs && node scripts/verify-search-index.mjs",
     "preview": "vitepress preview docs",
     "test": "node --test tests/*.test.mjs",
     "sync:api-protocols": "node scripts/sync-api-protocol-labels.mjs",
