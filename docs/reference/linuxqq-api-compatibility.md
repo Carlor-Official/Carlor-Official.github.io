@@ -49,7 +49,7 @@ await linuxApi.send_group_msg(self_id, group_id, message)
 
 ## 登录流程
 
-Android 使用 `add_account`、`login_account`、安全验证、短信和登录安全二维码。v2.5.9管理端 Linux 账号新增真正的账号密码登录，与免扫、扫码并列为三种方式。Linux 使用原生登录包及设备身份，签名来自云端。Android 仅保留 9.1.70，Linux 固定 3.2.32。
+Android 使用 `add_account`、`login_account`、安全验证、短信和登录安全二维码。v2.5.9管理端 Linux 账号新增真正的账号密码登录，与免扫、扫码并列为三种方式。Linux 使用原生登录包及设备身份，签名来自云端。Android 支持 9.2.70，Linux 固定 3.2.32。
 
 Linux 登录固定使用 `3.2.32`；`3.2.33` 已从协议目录和算法路由移除。升级时旧 `3.2.33` 账号会自动迁移到 `3.2.32`，不会删除账号、节点、设备身份或已有票据。
 
