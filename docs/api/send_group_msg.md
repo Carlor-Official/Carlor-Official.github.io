@@ -16,7 +16,7 @@ const result = await api.send_group_msg(self_id, group_id, message)
 | `group_id` | number | 是 | 目标群聊 ID |
 | `message` | Segment[] | 是 | 消息段数组 |
 
-支持 `text`、`reply`、`at`、`image`、`voice`、`video` 和 `face` 等群聊消息段，详见[消息段](/reference/message-segments.html)。
+支持 `text`、`reply`、`at`、`image`、`voice`、`video` 和 `face` 等群聊消息段，详见[消息段](https://mknt.net/reference/message-segments.html)。
 
 `video` 必须作为消息数组中的唯一消息段单独发送。
 

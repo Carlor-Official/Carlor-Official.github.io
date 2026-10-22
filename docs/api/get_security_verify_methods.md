@@ -51,4 +51,4 @@ const result = await api.get_security_verify_methods(self_id)
 
 返回结构与 [`login_account`](/api/login_account.html) 的 `security_verify` 字段一致。
 
-完整流程见[Bot 登录流程](/reference/login-flow.html)。
+完整流程见[Bot 登录流程](https://mknt.net/reference/login-flow.html)。

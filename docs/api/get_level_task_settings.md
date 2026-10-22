@@ -24,4 +24,4 @@ const result = await api.get_level_task_settings({ self_id: 123456, client_type:
 | `scheduleTime` | string | 每日执行时间，24 小时 HH:mm，默认 04:00 |
 | `lastRunDate` | string | 最近自动执行日期，只读；未执行时为空字符串 |
 
-详见[共享等级任务管理接入](/reference/level-task-management.html)。
+详见[共享等级任务管理接入](https://mknt.net/reference/level-task-management.html)。

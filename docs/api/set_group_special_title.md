@@ -13,7 +13,7 @@ const result = await api.set_group_special_title(
 )
 ```
 
-`success: true` 表示服务端确认设置请求成功。空响应、畸形响应、命令/服务号不匹配及服务端拒绝均作为错误返回。设置成功不等于事件已投递；框架会回读实际成员头衔，确认变化后补发标记 `source: 'server_readback'` 的 `group_title_changed`，并与原生推送去重。设置与恢复已通过双账号、Android/Linux、跨节点及三 WS 验证；不承诺其他客户端的任意通知模板或断线期间事件必达。详见[服务器回读确认](/events/notice.html#服务器回读确认)。
+`success: true` 表示服务端确认设置请求成功。空响应、畸形响应、命令/服务号不匹配及服务端拒绝均作为错误返回。设置成功不等于事件已投递；框架会回读实际成员头衔，确认变化后补发标记 `source: 'server_readback'` 的 `group_title_changed`，并与原生推送去重。设置与恢复已通过双账号、Android/Linux、跨节点及三 WS 验证；不承诺其他客户端的任意通知模板或断线期间事件必达。详见[服务器回读确认](https://mknt.net/events/notice.html#服务器回读确认)。
 
 ## 参数
 

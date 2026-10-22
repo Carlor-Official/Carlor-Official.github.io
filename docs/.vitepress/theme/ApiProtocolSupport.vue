@@ -2,12 +2,13 @@
 import { computed } from 'vue'
 import { useRoute } from 'vitepress'
 import { guidanceForAction } from '../../../shared/api-guidance.mjs'
+import { actions } from '../../../shared/api-actions.json'
 
 const route = useRoute()
 
 const guidance = computed(() => {
   const match = route.path.match(/^\/api\/([^/]+?)(?:\.html)?$/)
-  return match?.[1] ? guidanceForAction(match[1]) : null
+  return match?.[1] && actions.includes(match[1]) ? guidanceForAction(match[1]) : null
 })
 
 const availability = computed(() => guidance.value?.scope === 'independent' ? 'both' : guidance.value?.scope)

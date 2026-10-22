@@ -73,4 +73,4 @@ const result = await api.get_sms(self_id, 3, sign)
 
 QQ 返回的其他字段会按原始结构保留。
 
-完整流程见[Bot 登录流程](/reference/login-flow.html)。
+完整流程见[Bot 登录流程](https://mknt.net/reference/login-flow.html)。

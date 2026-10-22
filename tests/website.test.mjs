@@ -22,9 +22,9 @@ test('every API page is present exactly once in the layered menu', () => {
   const sidebar = buildApiSidebar(); const found=[]
   function walk(items) { for(const item of items) {if(item.link?.startsWith('/api/') && item.link !== '/api/') found.push(item.link); if(item.items) walk(item.items)} }
   walk(sidebar)
-  const expected=fs.readdirSync('docs/api').filter(n=>n.endsWith('.md')&&n!=='index.md').map(n=>'/api/'+n.replace('.md','.html'))
+  const expected=JSON.parse(fs.readFileSync('shared/api-actions.json','utf8')).actions.map(n=>'/api/'+n+'.html')
   assert.deepEqual([...found].sort(),expected.sort()); assert.equal(found.length,new Set(found).size)
-  for(const group of sidebar.slice(1)) {assert.equal(group.collapsed,true); for(const subgroup of group.items) {assert.equal(subgroup.collapsed,true); assert.ok(subgroup.items.length)}}
+  for(const group of sidebar.slice(1)) {assert.equal(group.collapsed,undefined); for(const subgroup of group.items) {assert.equal(subgroup.collapsed,true); assert.ok(subgroup.items.length)}}
 })
 test('all internal sidebar links resolve to real pages', () => {
   function walk(items) {for(const item of items) {if(item.link?.startsWith('/')) assert.ok(fs.existsSync('docs'+item.link.replace(/\/$/,'/index.md').replace(/\.html$/,'.md')),item.link); if(item.items) walk(item.items)}}

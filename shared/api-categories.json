@@ -1,0 +1,406 @@
+[
+  {
+    "text": "账号相关",
+    "groups": [
+      {
+        "text": "账号管理",
+        "actions": [
+          "get_bot_list",
+          "get_bot_info",
+          "get_login_info",
+          "get_status",
+          "get_online_clients",
+          "add_account",
+          "update_account",
+          "delete_account",
+          "stop_account_login",
+          "set_qq_avatar",
+          "set_qq_profile",
+          "set_self_longnick",
+          "set_online_status",
+          "set_diy_online_status",
+          "get_model_show",
+          "set_model_show",
+          "get_protocol_list",
+          "get_device_profile_list",
+          "refresh_account_fingerprint",
+          "get_account_settings",
+          "update_account_settings",
+          "get_account_offline_notification",
+          "update_account_offline_notification",
+          "get_account_recent_logs",
+          "get_account_management_context",
+          "get_account_access_list",
+          "set_account_access",
+          "clear_account_access"
+        ]
+      },
+      {
+        "text": "登录类",
+        "actions": [
+          "login_account",
+          "check_cache",
+          "cache_login",
+          "clear_account_cache",
+          "submit_slider",
+          "get_security_verify_methods",
+          "create_login_qr",
+          "query_login_qr_status",
+          "get_sms",
+          "check_sms",
+          "scan_qr",
+          "auth_qr",
+          "create_account_recovery_qr",
+          "query_account_recovery_qr_status",
+          "submit_account_identity_captcha",
+          "submit_account_identity_phone",
+          "confirm_account_identity_sms",
+          "retry_account_identity_verify",
+          "open_account_security_access",
+          "retry_account_security_verify",
+          "register_captcha_proxy",
+          "captcha_proxy"
+        ]
+      },
+      {
+        "text": "凭据类",
+        "actions": [
+          "get_skey",
+          "get_clientkey",
+          "get_pskey",
+          "get_rkey",
+          "nc_get_rkey",
+          "get_rkey_server",
+          "get_user_agent"
+        ]
+      },
+      {
+        "text": "任务类",
+        "actions": [
+          "get_level_tasks",
+          "execute_level_tasks",
+          "get_level_task_accounts",
+          "get_level_task_account",
+          "get_level_task_status",
+          "get_level_task_panel",
+          "get_level_task_settings",
+          "update_level_task_settings",
+          "execute_level_task_selection"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "好友相关",
+    "groups": [
+      {
+        "text": "消息类",
+        "actions": [
+          "send_private_msg",
+          "send_friend_msg",
+          "forward_friend_single_msg",
+          "send_private_forward_msg",
+          "get_friend_msg_history",
+          "mark_private_msg_as_read",
+          "send_ark_share",
+          "ArkSharePeer"
+        ]
+      },
+      {
+        "text": "媒体类",
+        "actions": [
+          "upload_friend_image",
+          "upload_private_file"
+        ]
+      },
+      {
+        "text": "功能类",
+        "actions": [
+          "get_friend_list",
+          "get_unidirectional_friend_list",
+          "get_profile_like",
+          "get_summary_card",
+          "like_summary_card",
+          "get_doubt_friends_add_request",
+          "set_doubt_friends_add_request",
+          "set_friend_add_request",
+          "send_friend_request",
+          "delete_friend",
+          "set_friend_remark",
+          "get_recent_contact",
+          "set_input_status",
+          "nc_get_user_status"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "群聊相关",
+    "groups": [
+      {
+        "text": "消息类",
+        "actions": [
+          "send_group_msg",
+          "send_group_temp_msg",
+          "get_group_msg_history",
+          "forward_group_single_msg",
+          "get_group_forward_msg",
+          "send_group_forward_msg",
+          "recall_group_msg",
+          "mark_group_msg_as_read",
+          "send_group_ark_share",
+          "ArkShareGroup"
+        ]
+      },
+      {
+        "text": "媒体类",
+        "actions": [
+          "upload_group_image",
+          "upload_group_voice",
+          "upload_group_video",
+          "send_group_ai_record"
+        ]
+      },
+      {
+        "text": "红包类",
+        "actions": [
+          "send_group_red_packet",
+          "get_red_packet_info",
+          "grab_red_packet",
+          "get_group_red_packets",
+          "get_up_for_grabs"
+        ]
+      },
+      {
+        "text": "功能类",
+        "actions": [
+          "get_group_list",
+          "get_group_member_list",
+          "get_group_system_notifications",
+          "approve_group_apply",
+          "reject_group_apply",
+          "approve_group_invite",
+          "set_group_admin",
+          "group_sign",
+          "set_group_mute",
+          "set_group_mute_all",
+          "set_group_special_title",
+          "kick_group_member",
+          "set_group_kick_members",
+          "get_group_at_all_remain",
+          "get_group_honor_info",
+          "get_group_signed_list",
+          "create_group",
+          "set_group_member_invite_policy",
+          "set_group_member_permissions",
+          "set_group_new_member_history_visibility",
+          "set_group_add_option",
+          "set_group_search",
+          "set_group_robot_add_option",
+          "set_group_card",
+          "send_group_join_request",
+          "leave_group",
+          "set_group_name",
+          "set_group_portrait"
+        ]
+      },
+      {
+        "text": "文件管理",
+        "actions": [
+          "get_group_file_system_info",
+          "get_group_root_files",
+          "get_group_files_by_folder",
+          "create_group_file_folder",
+          "delete_group_folder",
+          "upload_group_file",
+          "delete_group_file",
+          "rename_group_file",
+          "move_group_file"
+        ]
+      },
+      {
+        "text": "相册管理",
+        "actions": [
+          "get_qun_album_list",
+          "get_group_album_media_list",
+          "upload_image_to_qun_album",
+          "do_group_album_comment",
+          "set_group_album_media_like",
+          "cancel_group_album_media_like",
+          "del_group_album_media"
+        ]
+      },
+      {
+        "text": "公告与精华",
+        "actions": [
+          "get_group_notice",
+          "send_group_notice",
+          "del_group_notice",
+          "set_group_essence",
+          "get_essence_msg_list"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "QQ 空间",
+    "groups": [
+      {
+        "text": "动态与互动",
+        "actions": [
+          "get_qzone_friend_feeds",
+          "publish_qzone_feed",
+          "like_qzone_feed",
+          "unlike_qzone_feed",
+          "send_qzone_msg",
+          "delete_qzone_msg",
+          "comment_qzone_feed"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "QQ 宠物",
+    "groups": [
+      {
+        "text": "资料与属性",
+        "actions": [
+          "get_pet_profile",
+          "get_pet_medal_gallery",
+          "get_pet_vitals",
+          "get_pet_attributes"
+        ]
+      },
+      {
+        "text": "喂食与洗护",
+        "actions": [
+          "get_pet_food_catalog",
+          "feed_pet",
+          "buy_pet_food",
+          "get_pet_bath_catalog",
+          "get_pet_bath_inventory",
+          "bathe_pet",
+          "buy_pet_bath_item"
+        ]
+      },
+      {
+        "text": "活动与疲劳",
+        "actions": [
+          "get_pet_activity_overview",
+          "get_pet_activity_options",
+          "start_pet_activity",
+          "get_pet_activity_status",
+          "settle_pet_activity",
+          "encourage_pet_activity",
+          "get_pet_fatigue_status"
+        ]
+      },
+      {
+        "text": "好友与 PK",
+        "actions": [
+          "get_pet_pk_friends",
+          "get_pet_pk_strangers",
+          "get_pet_interaction_messages",
+          "get_pet_pk_power",
+          "poke_friend_pet",
+          "get_friend_pet_profile",
+          "feed_friend_pet",
+          "bathe_friend_pet",
+          "visit_friend_pet",
+          "start_pet_pk",
+          "get_pet_pk_status",
+          "settle_pet_pk"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "QQ 农场",
+    "groups": [
+      {
+        "text": "农场接口",
+        "actions": [
+          "get_qq_farm_code"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "通用工具",
+    "groups": [
+      {
+        "text": "消息工具",
+        "actions": [
+          "send_msg",
+          "get_msg",
+          "delete_msg",
+          "get_forward_msg",
+          "send_forward_msg",
+          "mark_msg_as_read",
+          "mark_all_as_read",
+          "fetch_emoji_like",
+          "get_emoji_likes",
+          "set_msg_emoji_like",
+          "send_poke",
+          "handle_quick_operation"
+        ]
+      },
+      {
+        "text": "媒体工具",
+        "actions": [
+          "can_send_image",
+          "can_send_record",
+          "get_flash_image",
+          "get_music_ark",
+          "get_mini_app_ark",
+          "get_ai_characters",
+          "get_ai_record",
+          "fetch_ptt_text"
+        ]
+      },
+      {
+        "text": "文件传输",
+        "actions": [
+          "download_file",
+          "upload_file_stream",
+          "clean_stream_temp_file",
+          "test_download_stream",
+          "download_file_stream",
+          "download_file_image_stream",
+          "download_file_record_stream"
+        ]
+      },
+      {
+        "text": "辅助工具",
+        "actions": [
+          "check_url_safely",
+          "translate_en2zh",
+          "send_packet"
+        ]
+      }
+    ]
+  },
+  {
+    "text": "框架管理",
+    "groups": [
+      {
+        "text": "服务与运行",
+        "actions": [
+          "get_plugin_context",
+          "get_version_info",
+          "set_restart"
+        ]
+      },
+      {
+        "text": "节点管理",
+        "actions": [
+          "get_node_list",
+          "create_node",
+          "update_node",
+          "delete_node",
+          "test_node_latency"
+        ]
+      }
+    ]
+  }
+]

@@ -54,4 +54,4 @@ const result = await api.check_sms(self_id, 3, sms.sign)
 用户发出短信后，服务端可能要几秒才能收到。此时 `result.state` 为 `2`、`result.code` 为 `3`，含义是「尚未收到」而非「验证失败」，属于可重试状态，应提示用户确认已用密保手机发送后再调用一次。
 :::
 
-完整流程见[Bot 登录流程](/reference/login-flow.html)。
+完整流程见[Bot 登录流程](https://mknt.net/reference/login-flow.html)。

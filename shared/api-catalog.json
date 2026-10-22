@@ -1,0 +1,938 @@
+{
+  "set_group_name": {
+    "title": "修改群名",
+    "description": "设置群名称，以服务器确认及通知为准"
+  },
+  "leave_group": {
+    "title": "主动退群",
+    "description": "当前账号退出群聊，禁止群主调用，不提供解散群能力"
+  },
+  "set_group_essence": {
+    "title": "设置精华消息",
+    "description": "设置或取消已缓存群消息的精华状态"
+  },
+  "send_poke": {
+    "title": "戳一戳",
+    "description": "向好友或群成员发送普通戳一戳"
+  },
+  "set_restart": {
+    "title": "重启框架服务",
+    "description": "保留账号缓存会话并重启当前框架进程"
+  },
+  "check_url_safely": {
+    "title": "检查网址安全性",
+    "description": "由 QQ Android 服务返回安全、未知或危险等级"
+  },
+  "translate_en2zh": {
+    "title": "英文翻译为中文",
+    "description": "调用 QQ Android 批量翻译服务"
+  },
+  "get_group_msg_history": {
+    "title": "获取群聊历史消息",
+    "description": "从 QQ 服务器按消息序号分页读取群聊历史消息"
+  },
+  "get_friend_msg_history": {
+    "title": "获取好友历史消息",
+    "description": "从 QQ 服务器按消息时间分页读取好友漫游消息"
+  },
+  "send_private_msg": {
+    "title": "发送私聊消息",
+    "description": "按用户 ID 使用萌卡原生好友消息链路发送消息"
+  },
+  "delete_msg": {
+    "title": "撤回消息",
+    "description": "根据消息引用自动分派群聊或私聊撤回"
+  },
+  "mark_group_msg_as_read": {
+    "title": "标记群聊已读",
+    "description": "将指定群消息序号作为群聊已读游标上报"
+  },
+  "mark_private_msg_as_read": {
+    "title": "标记私聊已读",
+    "description": "将指定好友消息时间作为私聊已读游标上报"
+  },
+  "mark_msg_as_read": {
+    "title": "标记消息已读",
+    "description": "自动识别群聊或私聊并上报已读游标"
+  },
+  "upload_private_file": {
+    "title": "上传私聊文件",
+    "description": "通过 QQ Android 9.2.70 离线文件通道向好友发送文件"
+  },
+  "send_forward_msg": {
+    "title": "发送合并转发消息",
+    "description": "按 `user_id` 或 `group_id` 自动选择私聊或群聊目标"
+  },
+  "send_private_forward_msg": {
+    "title": "发送私聊合并转发消息",
+    "description": "创建文本合并转发消息并发送给指定好友"
+  },
+  "mark_all_as_read": {
+    "title": "标记所有消息已读",
+    "description": "批量上报框架近期缓存的最新会话游标"
+  },
+  "handle_quick_operation": {
+    "title": "处理事件快速操作",
+    "description": "根据消息或申请事件上下文执行回复、撤回、群管理和申请处理"
+  },
+  "get_unidirectional_friend_list": {
+    "title": "获取单向好友列表",
+    "description": "获取当前账号的真实单向好友关系"
+  },
+  "get_profile_like": {
+    "title": "获取资料获赞",
+    "description": "获取当前登录 QQ 的真实资料获赞记录与统计"
+  },
+  "set_friend_remark": {
+    "title": "设置好友备注",
+    "description": "设置或清除指定好友的备注"
+  },
+  "get_group_at_all_remain": {
+    "title": "获取 @全体成员 剩余次数",
+    "description": "查询当前账号和群聊的实时 @全体成员权限与限额"
+  },
+  "get_essence_msg_list": {
+    "title": "获取群精华消息",
+    "description": "获取指定群聊的精华消息列表"
+  },
+  "get_group_file_system_info": {
+    "title": "获取群文件系统信息",
+    "description": "获取文件数量限制和存储空间使用情况"
+  },
+  "create_group": {
+    "title": "创建群聊",
+    "description": "创建普通 QQ 群，并可在创建成功后邀请成员"
+  },
+  "set_group_member_invite_policy": {
+    "title": "设置成员邀请策略",
+    "description": "控制普通成员能否直接邀请他人入群"
+  },
+  "set_group_member_permissions": {
+    "title": "设置成员权限",
+    "description": "单独开启或关闭成员邀请、上传等权限位"
+  },
+  "set_group_new_member_history_visibility": {
+    "title": "设置新成员历史消息可见性",
+    "description": "控制新成员是否能查看入群前历史消息"
+  },
+  "set_group_add_option": {
+    "title": "设置群加群选项",
+    "description": "设置入群验证方式、问题与答案"
+  },
+  "set_group_search": {
+    "title": "设置群搜索选项",
+    "description": "设置群号和条件搜索开关"
+  },
+  "set_group_robot_add_option": {
+    "title": "设置机器人入群选项",
+    "description": "设置机器人账号入群时是否允许及是否需要审核"
+  },
+  "get_qun_album_list": {
+    "title": "获取群相册列表",
+    "description": "分页获取群相册及封面信息"
+  },
+  "get_group_album_media_list": {
+    "title": "获取群相册媒体列表",
+    "description": "分页获取相册内的图片和视频"
+  },
+  "upload_image_to_qun_album": {
+    "title": "上传图片到群相册",
+    "description": "使用当前 Android QQ 登录态分片上传图片"
+  },
+  "do_group_album_comment": {
+    "title": "评论群相册媒体",
+    "description": "评论指定相册图片或视频"
+  },
+  "set_group_album_media_like": {
+    "title": "点赞群相册媒体",
+    "description": "点赞一批或指定相册媒体"
+  },
+  "cancel_group_album_media_like": {
+    "title": "取消群相册媒体点赞",
+    "description": "取消一批或指定相册媒体的点赞"
+  },
+  "del_group_album_media": {
+    "title": "删除群相册媒体",
+    "description": "删除相册图片或视频"
+  },
+  "get_group_root_files": {
+    "title": "获取群文件根目录",
+    "description": "获取根目录文件与文件夹，并自动处理分页"
+  },
+  "get_group_files_by_folder": {
+    "title": "获取群文件夹内容",
+    "description": "获取指定文件夹中的文件与子文件夹"
+  },
+  "create_group_file_folder": {
+    "title": "创建群文件夹",
+    "description": "由群主或管理员在根目录创建文件夹"
+  },
+  "delete_group_folder": {
+    "title": "删除群文件夹",
+    "description": "按真实文件夹 ID 删除群文件夹"
+  },
+  "upload_group_file": {
+    "title": "上传群文件",
+    "description": "通过 QQ Android 9.2.70 文件通道真实上传群文件"
+  },
+  "delete_group_file": {
+    "title": "删除群文件",
+    "description": "删除群文件，缺省业务参数由框架自动查询补齐"
+  },
+  "send_group_notice": {
+    "title": "发布群公告",
+    "description": "发布文字公告，并可附带本地、URL 或 Base64 图片"
+  },
+  "del_group_notice": {
+    "title": "删除群公告",
+    "description": "删除指定群聊中的公告"
+  },
+  "get_qq_farm_code": {
+    "title": "获取 QQ 农场登录 code",
+    "description": "获取一个新的 32 位 QQ 农场登录 code"
+  },
+  "get_skey": {
+    "title": "获取 skey",
+    "description": "获取当前 Bot 的 skey"
+  },
+  "get_user_agent": {
+    "title": "获取 User-Agent",
+    "description": "获取当前 Bot 协议和设备指纹对应的 User-Agent"
+  },
+  "get_login_info": {
+    "title": "获取登录信息",
+    "description": "读取当前账号 ID、昵称和客户端类型"
+  },
+  "get_status": {
+    "title": "获取运行状态",
+    "description": "读取当前账号连接状态、登录时间、上线时间与本地收发统计"
+  },
+  "get_online_clients": {
+    "title": "获取在线客户端",
+    "description": "返回账号在线设备列表"
+  },
+  "get_model_show": {
+    "title": "获取在线机型显示",
+    "description": "使用账号会话和设备指纹查询 QQ 服务端可用机型名称"
+  },
+  "set_model_show": {
+    "title": "设置在线机型显示",
+    "description": "设置在线机型名称，或恢复 QQ 默认显示"
+  },
+  "get_version_info": {
+    "title": "获取版本信息",
+    "description": "读取萌卡 NT 和插件协议版本"
+  },
+  "can_send_image": {
+    "title": "检查图片发送能力",
+    "description": "查询当前账号平台是否支持图片发送"
+  },
+  "can_send_record": {
+    "title": "检查语音发送能力",
+    "description": "查询当前账号平台是否支持语音发送"
+  },
+  "download_file": {
+    "title": "下载文件",
+    "description": "将公网 HTTP/HTTPS 文件安全下载到框架隔离目录"
+  },
+  "upload_file_stream": {
+    "title": "上传文件流",
+    "description": "分片上传文件到框架临时目录"
+  },
+  "clean_stream_temp_file": {
+    "title": "清理流临时文件",
+    "description": "清理上传流状态与临时文件"
+  },
+  "test_download_stream": {
+    "title": "测试流式传输",
+    "description": "发送十个测试分片并返回完成结果"
+  },
+  "download_file_stream": {
+    "title": "流式下载文件",
+    "description": "通过分片帧下载文件"
+  },
+  "download_file_image_stream": {
+    "title": "流式下载图片",
+    "description": "通过分片帧下载图片并返回宽高"
+  },
+  "download_file_record_stream": {
+    "title": "流式下载语音",
+    "description": "通过分片帧下载语音并可转换格式"
+  },
+  "get_msg": {
+    "title": "获取消息",
+    "description": "读取框架保留的标准消息引用和消息段"
+  },
+  "get_flash_image": {
+    "title": "获取闪照原图地址",
+    "description": "读取当前账号实时收到的闪照原图地址与图片信息"
+  },
+  "get_recent_contact": {
+    "title": "获取最近会话",
+    "description": "获取框架近期观察到的私聊与群聊会话"
+  },
+  "send_msg": {
+    "title": "发送消息",
+    "description": "按好友或群聊目标复用现有消息发送链路"
+  },
+  "forward_friend_single_msg": {
+    "title": "转发单条好友消息",
+    "description": "将进程内缓存消息重新发送给指定好友"
+  },
+  "forward_group_single_msg": {
+    "title": "转发单条群消息",
+    "description": "将进程内缓存消息重新发送到指定群聊"
+  },
+  "get_forward_msg": {
+    "title": "获取合并转发消息",
+    "description": "从消息 ID 或资源 ID 获取合并转发节点"
+  },
+  "set_group_kick_members": {
+    "title": "批量移出群聊成员",
+    "description": "按顺序复用单人移出链路，单次最多 20 人"
+  },
+  "get_rkey": {
+    "title": "获取媒体 RKey",
+    "description": "读取框架后台已维护的媒体 RKey 缓存"
+  },
+  "nc_get_rkey": {
+    "title": "获取媒体 RKey（通用 action）",
+    "description": "与 `get_rkey` 使用同一套萌卡原生缓存"
+  },
+  "get_rkey_server": {
+    "title": "获取媒体 RKey 服务信息",
+    "description": "读取私聊、群聊 RKey 与统一过期时间"
+  },
+  "nc_get_user_status": {
+    "title": "获取用户在线状态",
+    "description": "查询指定 QQ 当前的在线状态与扩展状态"
+  },
+  "get_mini_app_ark": {
+    "title": "生成小程序 Ark 卡片",
+    "description": "生成可发送的小程序 Ark 数据"
+  },
+  "get_music_ark": {
+    "title": "生成音乐 Ark 卡片",
+    "description": "根据 QQ 或网易云歌曲信息生成带内容绑定签名的可播放音乐卡片"
+  },
+  "ArkSharePeer": {
+    "title": "生成好友分享 Ark",
+    "description": "根据现有好友资料生成联系人分享 Ark"
+  },
+  "send_ark_share": {
+    "title": "生成好友分享 Ark（通用 action）",
+    "description": "与 `ArkSharePeer` 使用同一套萌卡原生处理链路"
+  },
+  "ArkShareGroup": {
+    "title": "生成群聊分享 Ark",
+    "description": "根据现有群资料生成群聊分享 Ark"
+  },
+  "send_group_ark_share": {
+    "title": "生成群聊分享 Ark（通用 action）",
+    "description": "与 `ArkShareGroup` 使用同一套萌卡原生处理链路"
+  },
+  "get_ai_characters": {
+    "title": "获取 AI 声音角色",
+    "description": "获取群聊可用的 AI 声音角色列表"
+  },
+  "get_ai_record": {
+    "title": "生成 AI 语音",
+    "description": "合成 AI 语音并返回可访问地址"
+  },
+  "send_group_ai_record": {
+    "title": "发送群聊 AI 语音",
+    "description": "合成并直接发送群聊 AI 语音"
+  },
+  "fetch_ptt_text": {
+    "title": "识别语音文字",
+    "description": "识别框架消息缓存中的群语音"
+  },
+  "set_msg_emoji_like": {
+    "title": "设置消息表情回应",
+    "description": "添加或取消群消息表情回应"
+  },
+  "fetch_emoji_like": {
+    "title": "分页获取消息表情回应",
+    "description": "分页获取指定群消息的表情回应用户"
+  },
+  "get_emoji_likes": {
+    "title": "获取全部消息表情回应",
+    "description": "自动翻页获取指定群消息的全部表情回应用户"
+  },
+  "set_input_status": {
+    "title": "设置正在输入状态",
+    "description": "向指定好友同步正在输入或结束输入状态"
+  },
+  "get_doubt_friends_add_request": {
+    "title": "获取可疑好友申请",
+    "description": "获取 QQ 标记为可疑的待处理好友申请"
+  },
+  "set_doubt_friends_add_request": {
+    "title": "处理可疑好友申请",
+    "description": "同意指定可疑好友申请"
+  },
+  "send_qzone_msg": {
+    "title": "发布空间动态（完整参数）",
+    "description": "发布带图片、可见范围和指定好友范围的空间动态"
+  },
+  "delete_qzone_msg": {
+    "title": "删除空间动态",
+    "description": "按动态 tid 删除本人空间动态"
+  },
+  "rename_group_file": {
+    "title": "重命名群文件",
+    "description": "按文件 ID 重命名群文件"
+  },
+  "move_group_file": {
+    "title": "移动群文件",
+    "description": "在群文件目录之间移动文件"
+  },
+  "send_packet": {
+    "title": "发送原始协议包",
+    "description": "使用当前账号会话发送已组装的原生协议包"
+  },
+  "set_online_status": {
+    "title": "设置在线状态",
+    "description": "设置在线、离开、忙碌、隐身及扩展状态"
+  },
+  "set_diy_online_status": {
+    "title": "设置自定义在线状态",
+    "description": "设置自定义状态图标和文字"
+  },
+  "get_clientkey": {
+    "title": "获取 clientkey",
+    "description": "获取十六进制 clientkey"
+  },
+  "send_group_msg": {
+    "title": "发送群聊消息",
+    "description": "向指定群聊发送消息"
+  },
+  "send_friend_msg": {
+    "title": "发送好友消息",
+    "description": "向指定好友发送消息"
+  },
+  "send_group_temp_msg": {
+    "title": "发送群临时会话消息",
+    "description": "通过共同群聊向非好友群成员发起临时私聊"
+  },
+  "get_friend_list": {
+    "title": "获取好友列表",
+    "description": "获取完整好友列表"
+  },
+  "get_qzone_friend_feeds": {
+    "title": "获取好友动态",
+    "description": "获取好友空间最新动态"
+  },
+  "publish_qzone_feed": {
+    "title": "发布空间动态",
+    "description": "发布一条文本空间动态"
+  },
+  "comment_qzone_feed": {
+    "title": "评论好友动态",
+    "description": "评论指定动态"
+  },
+  "like_qzone_feed": {
+    "title": "点赞好友动态",
+    "description": "点赞指定动态"
+  },
+  "unlike_qzone_feed": {
+    "title": "取消好友动态点赞",
+    "description": "取消指定动态的点赞"
+  },
+  "get_group_list": {
+    "title": "获取群聊列表",
+    "description": "获取完整群聊列表"
+  },
+  "get_group_member_list": {
+    "title": "获取群聊成员列表",
+    "description": "获取指定群聊的成员"
+  },
+  "get_group_notice": {
+    "title": "获取群公告",
+    "description": "使用当前 Android QQ 登录态获取群公告"
+  },
+  "get_group_honor_info": {
+    "title": "获取群荣誉信息",
+    "description": "获取龙王、群聊之火、群聊炽焰和快乐源泉榜单"
+  },
+  "get_group_signed_list": {
+    "title": "获取群组今日打卡列表",
+    "description": "获取群聊当天的打卡成员和排名"
+  },
+  "get_group_system_notifications": {
+    "title": "获取群聊系统通知",
+    "description": "获取群聊申请与通知"
+  },
+  "approve_group_apply": {
+    "title": "同意加入群聊申请",
+    "description": "同意指定申请"
+  },
+  "reject_group_apply": {
+    "title": "拒绝加入群聊申请",
+    "description": "拒绝指定申请"
+  },
+  "approve_group_invite": {
+    "title": "同意群聊邀请",
+    "description": "同意好友发来的群聊邀请"
+  },
+  "get_pskey": {
+    "title": "获取 PsKey",
+    "description": "获取指定域名的 PsKey"
+  },
+  "send_group_red_packet": {
+    "title": "发送群红包",
+    "description": "发送拼手气、普通、专属、语音或口令群红包"
+  },
+  "get_red_packet_info": {
+    "title": "查询红包详细信息",
+    "description": "查询收到的 QQ 红包状态与金额信息"
+  },
+  "grab_red_packet": {
+    "title": "领取红包",
+    "description": "领取收到的 QQ 群红包"
+  },
+  "get_group_red_packets": {
+    "title": "获取群聊可领取红包",
+    "description": "获取指定群聊中当前仍可领取的红包"
+  },
+  "get_up_for_grabs": {
+    "title": "获取可领取红包",
+    "description": "与群聊可领取红包查询使用同一套萌卡原生处理链路"
+  },
+  "set_qq_avatar": {
+    "title": "设置 QQ 头像",
+    "description": "通过 Highway 上传当前 Bot 头像"
+  },
+  "upload_group_image": {
+    "title": "上传群聊图片",
+    "description": "上传图片并生成图片消息段"
+  },
+  "upload_friend_image": {
+    "title": "上传好友图片",
+    "description": "上传好友聊天图片"
+  },
+  "upload_group_voice": {
+    "title": "上传群聊语音",
+    "description": "上传音频并生成语音消息段"
+  },
+  "upload_group_video": {
+    "title": "上传群聊视频",
+    "description": "上传 MP4 视频并生成视频消息段"
+  },
+  "get_summary_card": {
+    "title": "获取 QQ 名片",
+    "description": "获取自己或指定用户的 QQ 名片"
+  },
+  "set_qq_profile": {
+    "title": "设置 QQ 资料",
+    "description": "设置当前账号昵称、性别和个性签名，并回读最新名片"
+  },
+  "set_self_longnick": {
+    "title": "设置 QQ 个性签名",
+    "description": "按 QQ Android 9.2.70 的审核与保存链路设置或清空当前账号签名"
+  },
+  "set_group_portrait": {
+    "title": "设置群头像",
+    "description": "按 QQ Android 9.2.70 的真实上传链路设置群聊头像"
+  },
+  "like_summary_card": {
+    "title": "点赞 QQ 名片",
+    "description": "点赞指定用户的 QQ 名片"
+  },
+  "get_plugin_context": {
+    "title": "获取插件上下文",
+    "description": "读取当前服务、节点、契约版本、可用管理 action 与管理端地址"
+  },
+  "get_account_management_context": {
+    "title": "获取账号管理上下文",
+    "description": "一次读取账号、协议、指纹和节点快照"
+  },
+  "get_level_task_accounts": {
+    "title": "获取等级加速账号列表",
+    "description": "获取框架共享等级任务账号及协议支持情况"
+  },
+  "get_level_task_account": {
+    "title": "获取等级加速账号详情",
+    "description": "读取单个账号的共享任务状态"
+  },
+  "get_level_task_panel": {
+    "title": "获取等级加速面板",
+    "description": "刷新或读取共享任务面板；仅返回免费任务，付费项目由框架移除"
+  },
+  "get_level_task_status": {
+    "title": "查询等级任务状态",
+    "description": "只读查询每项任务状态、当前等级与今日加速汇总，不执行任务"
+  },
+  "get_level_task_settings": {
+    "title": "读取等级任务计划",
+    "description": "读取框架统一调度配置"
+  },
+  "update_level_task_settings": {
+    "title": "保存等级任务计划",
+    "description": "保存计划，不立即执行"
+  },
+  "execute_level_task_selection": {
+    "title": "执行选定等级任务",
+    "description": "复用框架执行过滤、缓存与并发控制；付费任务标题会被跳过"
+  },
+  "create_account_recovery_qr": {
+    "title": "创建账号归属验证二维码",
+    "description": "创建只用于证明 QQ 归属的临时二维码"
+  },
+  "query_account_recovery_qr_status": {
+    "title": "查询账号归属验证",
+    "description": "查询扫码状态，确认后只返回 QQ 号"
+  },
+  "get_node_list": {
+    "title": "获取节点列表",
+    "description": "获取全部节点及账号统计，不返回代理密码"
+  },
+  "create_node": {
+    "title": "创建节点",
+    "description": "创建直连或 HTTP/SOCKS5 代理节点"
+  },
+  "update_node": {
+    "title": "更新节点",
+    "description": "更新已停用节点，代理密码支持保留或清除"
+  },
+  "delete_node": {
+    "title": "删除节点",
+    "description": "删除已停用且未被账号引用的节点"
+  },
+  "test_node_latency": {
+    "title": "测试节点延迟",
+    "description": "测试节点代理 TCP 连接延迟"
+  },
+  "get_account_settings": {
+    "title": "获取账号设置",
+    "description": "读取缓存登录、自动登录和离线清理设置"
+  },
+  "update_account_settings": {
+    "title": "更新账号设置",
+    "description": "更新框架级账号设置并校验依赖关系"
+  },
+  "get_account_offline_notification": {
+    "title": "获取账号离线通知",
+    "description": "读取指定 QQ 与协议的离线邮件通知设置"
+  },
+  "update_account_offline_notification": {
+    "title": "更新账号离线通知",
+    "description": "更新指定 QQ 与协议的离线邮件通知设置"
+  },
+  "clear_account_cache": {
+    "title": "清理账号缓存",
+    "description": "清理指定 QQ 和协议的本地登录缓存"
+  },
+  "stop_account_login": {
+    "title": "停止账号会话",
+    "description": "取消正在进行的登录，或下线已登录账号"
+  },
+  "submit_account_identity_captcha": {
+    "title": "提交身份滑块",
+    "description": "提交身份验证滑块结果"
+  },
+  "submit_account_identity_phone": {
+    "title": "提交身份手机号",
+    "description": "提交身份验证手机号并请求短信"
+  },
+  "confirm_account_identity_sms": {
+    "title": "确认身份短信",
+    "description": "确认身份验证短信已完成"
+  },
+  "retry_account_identity_verify": {
+    "title": "重试身份验证登录",
+    "description": "使用验证结果重试账号登录"
+  },
+  "open_account_security_access": {
+    "title": "调用账号安全验证",
+    "description": "调用指定 SsoSecureAccess 验证类型"
+  },
+  "retry_account_security_verify": {
+    "title": "重试安全验证登录",
+    "description": "使用安全验证结果重试账号登录"
+  },
+  "get_account_access_list": {
+    "title": "获取账号授权租约",
+    "description": "获取当前服务创建的账号授权租约"
+  },
+  "set_account_access": {
+    "title": "设置账号授权租约",
+    "description": "为指定 QQ 与协议创建或更新授权租约"
+  },
+  "clear_account_access": {
+    "title": "清除账号授权租约",
+    "description": "清除当前服务对指定 QQ 与协议的租约"
+  },
+  "get_account_recent_logs": {
+    "title": "获取账号最近日志",
+    "description": "获取指定 QQ 与协议最近 200 条账号日志"
+  },
+  "get_bot_list": {
+    "title": "获取 Bot 列表",
+    "description": "获取当前框架实例中的全部协议账号；不接受参数"
+  },
+  "get_bot_info": {
+    "title": "获取 Bot 信息",
+    "description": "获取指定 Bot 的运行信息"
+  },
+  "get_protocol_list": {
+    "title": "获取协议列表",
+    "description": "获取可选协议"
+  },
+  "get_device_profile_list": {
+    "title": "获取设备指纹列表",
+    "description": "只读查询框架自动管理的设备指纹"
+  },
+  "add_account": {
+    "title": "添加账号",
+    "description": "创建账号并指定其登录节点"
+  },
+  "update_account": {
+    "title": "编辑账号",
+    "description": "编辑离线账号配置"
+  },
+  "refresh_account_fingerprint": {
+    "title": "刷新账号设备指纹",
+    "description": "刷新离线账号当前协议的专属指纹，并清空对应登录缓存"
+  },
+  "delete_account": {
+    "title": "删除账号",
+    "description": "删除指定协议的离线账号"
+  },
+  "login_account": {
+    "title": "密码登录",
+    "description": "发起密码登录"
+  },
+  "check_cache": {
+    "title": "检查登录缓存",
+    "description": "检查本地登录缓存"
+  },
+  "cache_login": {
+    "title": "缓存登录",
+    "description": "使用本地缓存登录"
+  },
+  "submit_slider": {
+    "title": "提交滑块验证",
+    "description": "提交滑块结果"
+  },
+  "get_security_verify_methods": {
+    "title": "查询安全验证方式",
+    "description": "查询安全验证原因与可用方式"
+  },
+  "get_sms": {
+    "title": "获取短信验证码",
+    "description": "下发安全验证短信"
+  },
+  "check_sms": {
+    "title": "提交短信验证码",
+    "description": "提交短信验证码并继续登录"
+  },
+  "create_login_qr": {
+    "title": "创建登录二维码",
+    "description": "创建安全验证登录二维码"
+  },
+  "query_login_qr_status": {
+    "title": "查询登录二维码状态",
+    "description": "查询扫码状态并在确认后继续登录"
+  },
+  "scan_qr": {
+    "title": "Android 扫描登录二维码",
+    "description": "使用在线 Android Bot 扫描登录二维码"
+  },
+  "auth_qr": {
+    "title": "Android 授权登录二维码",
+    "description": "使用在线 Android Bot 确认二维码授权"
+  },
+  "set_group_admin": {
+    "title": "设置群聊管理员",
+    "description": "设置或取消管理员"
+  },
+  "set_group_card": {
+    "title": "修改群成员名片",
+    "description": "修改或清空指定成员在群内显示的昵称"
+  },
+  "group_sign": {
+    "title": "群聊打卡",
+    "description": "在指定群聊打卡"
+  },
+  "set_group_mute": {
+    "title": "设置群聊成员禁言",
+    "description": "设置或取消成员禁言"
+  },
+  "set_group_mute_all": {
+    "title": "设置群聊全员禁言",
+    "description": "开启或取消全员禁言"
+  },
+  "set_group_special_title": {
+    "title": "设置群聊专属头衔",
+    "description": "设置或清除成员专属头衔"
+  },
+  "kick_group_member": {
+    "title": "移出群聊成员",
+    "description": "将指定成员移出群聊"
+  },
+  "recall_group_msg": {
+    "title": "撤回群聊消息",
+    "description": "撤回指定群聊消息"
+  },
+  "get_group_forward_msg": {
+    "title": "获取群聊合并转发消息",
+    "description": "获取合并转发的完整内容"
+  },
+  "send_group_forward_msg": {
+    "title": "发送群聊合并转发消息",
+    "description": "创建文本合并转发消息"
+  },
+  "delete_friend": {
+    "title": "删除好友",
+    "description": "删除指定好友"
+  },
+  "send_friend_request": {
+    "title": "主动申请加好友",
+    "description": "提交好友申请，不等同于好友关系已建立"
+  },
+  "send_group_join_request": {
+    "title": "主动申请入群",
+    "description": "Android 提交入群说明，不等同于账号已入群"
+  },
+  "set_friend_add_request": {
+    "title": "处理好友申请",
+    "description": "同意或拒绝好友申请，可在同意时设置备注"
+  },
+  "get_level_tasks": {
+    "title": "获取等级加速任务",
+    "description": "读取当前协议的等级任务；daily_totals_available=false 时今日汇总未知，数值为 null"
+  },
+  "execute_level_tasks": {
+    "title": "执行等级加速任务",
+    "description": "执行指定的等级加速任务"
+  },
+  "register_captcha_proxy": {
+    "title": "注册滑块验证反代",
+    "description": "注册滑块反代并返回改写后的验证脚本"
+  },
+  "captcha_proxy": {
+    "title": "滑块验证反代请求",
+    "description": "反代转发滑块请求到腾讯验证服务"
+  },
+  "get_pet_profile": {
+    "title": "获取宠物资料",
+    "description": "获取本人宠物资料"
+  },
+  "get_pet_medal_gallery": {
+    "title": "获取宠物勋章图鉴",
+    "description": "获取全部勋章及获得、佩戴状态"
+  },
+  "get_pet_vitals": {
+    "title": "获取宠物数值",
+    "description": "根据 pet_id 获取本人或好友宠物的心情、饱腹、清洁和金币"
+  },
+  "get_pet_attributes": {
+    "title": "获取宠物三维属性",
+    "description": "获取力量、智力、魅力等成长属性"
+  },
+  "get_pet_food_catalog": {
+    "title": "获取食物目录",
+    "description": "获取食物目录与库存"
+  },
+  "feed_pet": {
+    "title": "给宠物喂食",
+    "description": "使用指定名称或 ID 的食物喂食"
+  },
+  "buy_pet_food": {
+    "title": "购买宠物食物",
+    "description": "按食物名称或 ID 购买宠物食物"
+  },
+  "get_pet_bath_catalog": {
+    "title": "获取洗护用品目录",
+    "description": "获取洗护用品与价格"
+  },
+  "get_pet_bath_inventory": {
+    "title": "获取洗护用品库存",
+    "description": "获取洗护用品持有数量"
+  },
+  "bathe_pet": {
+    "title": "给宠物洗护",
+    "description": "按名称或 ID 使用洗护用品"
+  },
+  "buy_pet_bath_item": {
+    "title": "购买洗护用品",
+    "description": "按名称或 ID 购买洗护用品"
+  },
+  "get_pet_activity_overview": {
+    "title": "获取活动概览",
+    "description": "获取学习或打工概览"
+  },
+  "get_pet_activity_options": {
+    "title": "获取活动选项",
+    "description": "获取可选课程、岗位或冒险"
+  },
+  "start_pet_activity": {
+    "title": "开始宠物活动",
+    "description": "开始学习、打工或冒险"
+  },
+  "get_pet_activity_status": {
+    "title": "获取活动状态",
+    "description": "获取当前活动状态"
+  },
+  "settle_pet_activity": {
+    "title": "结算宠物活动",
+    "description": "结算当前活动"
+  },
+  "encourage_pet_activity": {
+    "title": "鼓励活动中的宠物",
+    "description": "鼓励当前活动中的宠物"
+  },
+  "get_pet_fatigue_status": {
+    "title": "获取宠物疲劳状态",
+    "description": "获取学习/打工目录下发的疲劳档位与收益倍率"
+  },
+  "get_pet_pk_friends": {
+    "title": "获取 PK 好友列表",
+    "description": "读取宠物好友目录；目录受版本限制时返回错误，已有真实 pet_id 可直接查询数值。"
+  },
+  "get_pet_pk_strangers": {
+    "title": "获取推荐 PK 对手",
+    "description": "读取宠物陌生人目录；目录受版本限制时返回错误，不生成替代条目。"
+  },
+  "get_pet_interaction_messages": {
+    "title": "获取宠物互动消息",
+    "description": "获取来访、投喂等互动动态"
+  },
+  "get_pet_pk_power": {
+    "title": "获取宠物 PK 数值",
+    "description": "根据 pet_id 获取本人或好友宠物战力"
+  },
+  "poke_friend_pet": {
+    "title": "戳一戳好友宠物",
+    "description": "与好友宠物互动"
+  },
+  "get_friend_pet_profile": {
+    "title": "获取好友宠物资料",
+    "description": "查询好友档案或实时数值；支持显式 pet_id，并在低版本错误时复用当前账号 15 分钟内已验证的好友 ID。"
+  },
+  "feed_friend_pet": {
+    "title": "给好友宠物喂食",
+    "description": "使用指定食物给好友宠物喂食"
+  },
+  "bathe_friend_pet": {
+    "title": "给好友宠物洗护",
+    "description": "使用指定用品给好友宠物洗护"
+  },
+  "visit_friend_pet": {
+    "title": "访问好友宠物",
+    "description": "访问好友的宠物页面"
+  },
+  "start_pet_pk": {
+    "title": "发起宠物 PK",
+    "description": "与指定好友的宠物开始 PK"
+  },
+  "get_pet_pk_status": {
+    "title": "获取宠物 PK 状态",
+    "description": "查询指定 PK 任务状态"
+  },
+  "settle_pet_pk": {
+    "title": "结算宠物 PK",
+    "description": "结算指定 PK 任务"
+  }
+}

@@ -9,8 +9,10 @@
     "preview": "vitepress preview docs",
     "test": "node --test tests/*.test.mjs",
     "sync:api-protocols": "node scripts/sync-api-protocol-labels.mjs",
+    "sync:api-categories": "node scripts/sync-api-categories.mjs",
+    "check:api-categories": "node scripts/sync-api-categories.mjs --check",
     "check:api-protocols": "node scripts/sync-api-protocol-labels.mjs --check && node scripts/verify-api-protocol-labels.mjs",
-    "check": "npm test && npm run build"
+    "check": "npm test && npm run check:api-categories && npm run check:api-protocols && npm run build && node scripts/check-built-links.mjs"
   },
   "devDependencies": {
     "@phosphor-icons/vue": "^2.2.1",

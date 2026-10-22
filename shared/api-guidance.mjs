@@ -22,7 +22,7 @@ const accountIndependentActions = new Set([
 
 const systemManagementActions = new Set([
   'get_plugin_context', 'get_node_list', 'create_node', 'update_node', 'delete_node', 'test_node_latency',
-  'create_device_profile', 'delete_device_profile', 'get_account_management_context',
+  'refresh_account_fingerprint', 'get_account_management_context',
   'create_account_recovery_qr', 'query_account_recovery_qr_status',
   'get_account_settings', 'update_account_settings',
   'get_account_offline_notification', 'update_account_offline_notification',
@@ -41,7 +41,7 @@ const systemManagementActions = new Set([
 
 const systemManagementIndependentActions = new Set([
   'get_plugin_context', 'get_node_list', 'create_node', 'update_node', 'delete_node', 'test_node_latency',
-  'create_device_profile', 'delete_device_profile', 'get_account_management_context',
+  'get_account_management_context',
   'create_account_recovery_qr', 'query_account_recovery_qr_status',
   'get_account_settings', 'update_account_settings', 'get_account_access_list',
   'get_level_task_accounts', 'get_level_task_settings', 'update_level_task_settings',

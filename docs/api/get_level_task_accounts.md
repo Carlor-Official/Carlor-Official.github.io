@@ -26,4 +26,4 @@ const result = await api.get_level_task_accounts({})
 | `levelTaskSupported` | boolean | 是否支持等级任务 |
 
 
-详见[共享等级任务管理接入](/reference/level-task-management.html)。
+详见[共享等级任务管理接入](https://mknt.net/reference/level-task-management.html)。

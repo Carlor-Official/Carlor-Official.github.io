@@ -22,4 +22,4 @@ const result = await api.update_level_task_settings({ self_id: 123456, client_ty
 
 返回保存后的 `{ selectedTasks, scheduleEnabled, scheduleTime, lastRunDate }`。这是完整设置替换，三项均必填；不修改 lastRunDate，不接受由插件指定执行日期。保存操作不执行任务，框架现有调度器使用该计划。
 
-详见[共享等级任务管理接入](/reference/level-task-management.html)。
+详见[共享等级任务管理接入](https://mknt.net/reference/level-task-management.html)。

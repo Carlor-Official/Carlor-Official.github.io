@@ -29,4 +29,4 @@ const result = await api.create_login_qr(self_id)
 
 将 `qr_url` 渲染成二维码，并保留 `guarantee_token` 用于查询状态。二维码有效期单位为秒。
 
-完整流程见[Bot 登录流程](/reference/login-flow.html)。
+完整流程见[Bot 登录流程](https://mknt.net/reference/login-flow.html)。

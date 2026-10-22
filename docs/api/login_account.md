@@ -33,4 +33,4 @@ const result = await api.login_account(self_id)
 | `140022010` | 需要安全验证，查询<a class="security-method-link" href="/api/get_security_verify_methods">安全验证方式</a> |
 | `140022013` | 账号或密码错误 |
 
-完整处理顺序见[Bot 登录流程](/reference/login-flow.html)。
+完整处理顺序见[Bot 登录流程](https://mknt.net/reference/login-flow.html)。

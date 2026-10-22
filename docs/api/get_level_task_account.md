@@ -19,4 +19,4 @@ const result = await api.get_level_task_account({ self_id: 123456, client_type: 
 
 返回 `selfId/platform/nickname/status/level/levelTaskSupported`、`upgradeRequiredDays`、`nextLevelTotalDays`、`activeDaysAvailable`。在线且 SummaryCard 成功时返回 `activeDays` 和 `remainingUpgradeDays`；无法获取活跃天数时省略这两个字段。
 
-详见[共享等级任务管理接入](/reference/level-task-management.html)。
+详见[共享等级任务管理接入](https://mknt.net/reference/level-task-management.html)。
