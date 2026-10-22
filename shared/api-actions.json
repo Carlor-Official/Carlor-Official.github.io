@@ -1,7 +1,7 @@
 {
-  "baseline": "v2.8.0",
-  "source": "Current official framework action catalog and SDK reference; additive login_time explicitly marked pending release",
-  "originalHead": "d2bdd97c7d05617bec45555752202009bc15b71f",
+  "baseline": "v2.8.1",
+  "source": "Published official framework action catalog and SDK reference, including login_time and online_time",
+  "originalHead": "4631d4b6c4c4c246a56b34cd9c36d308ac39c63c",
   "sha256": "2c259bc59e49e73c4dd7f0cf8caa72d4c2e4677fb7f683af1b60d6cc18037e13",
   "actions": [
     "set_group_name",

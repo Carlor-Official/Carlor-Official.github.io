@@ -35,7 +35,7 @@ const status = await api.get_status(self_id)
 ## 时间字段
 
 ::: info 版本说明
-新增的 `stat.login_time` 已在框架源码补齐，将随下一框架版本提供；已发布的 2.8.0 尚不包含这个新增字段。`stat.online_time` 的现有返回位置和含义不变。
+从框架 **2.8.1** 起，`get_status` 同时返回 `stat.login_time`（登录时间）和 `stat.online_time`（上线时间）。2.8.0 尚不包含新增的 `stat.login_time`；`stat.online_time` 的返回位置和含义保持不变。
 :::
 
 

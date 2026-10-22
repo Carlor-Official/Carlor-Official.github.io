@@ -36,11 +36,12 @@ test('retired fingerprint APIs remain readable but are not advertised as callabl
   }
 })
 
-test('status timestamps document seconds and distinguish the pending field from released 2.8.0', () => {
+test('status timestamps document seconds and the released 2.8.1 contract', () => {
   const page = fs.readFileSync('docs/api/get_status.md', 'utf8')
   assert.match(page, /stat\.login_time/)
   assert.match(page, /stat\.online_time/)
   assert.match(page, /秒级 Unix 时间戳/)
-  assert.match(page, /2\.8\.0 尚不包含/)
+  assert.match(page, /2\.8\.1/)
+  assert.doesNotMatch(page, /将随下一框架版本|已在框架源码补齐/)
   assert.doesNotMatch(page, /online_time: 3600/)
 })
